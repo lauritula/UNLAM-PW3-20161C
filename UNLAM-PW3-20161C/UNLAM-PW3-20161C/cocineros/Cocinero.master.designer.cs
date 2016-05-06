@@ -11,7 +11,7 @@ namespace UNLAM_PW3_20161C.cocineros
 {
 
 
-    public partial class cancelar
+    public partial class Cocinero
     {
     }
 }

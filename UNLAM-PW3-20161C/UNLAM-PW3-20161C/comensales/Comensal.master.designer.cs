@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UNLAM_PW3_20161C.cocineros
+namespace UNLAM_PW3_20161C.comensales
 {
 
 
-    public partial class cancelar
+    public partial class Comensal
     {
     }
 }
