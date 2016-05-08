@@ -29,5 +29,14 @@ namespace UNLAM_PW3_20161C {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder anonimoBody;
+        
+        /// <summary>
+        /// ucMenuAnonimo1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucMenuAnonimo ucMenuAnonimo1;
     }
 }

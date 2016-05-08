@@ -11,5 +11,41 @@ namespace UNLAM_PW3_20161C {
     
     
     public partial class login {
+        
+        /// <summary>
+        /// ucMenuAnonimo1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucMenuAnonimo ucMenuAnonimo1;
+        
+        /// <summary>
+        /// txtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// txtContrasena control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtContrasena;
+        
+        /// <summary>
+        /// btnIngresar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnIngresar;
     }
 }

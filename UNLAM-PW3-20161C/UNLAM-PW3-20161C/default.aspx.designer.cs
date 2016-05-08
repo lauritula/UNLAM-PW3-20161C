@@ -11,5 +11,14 @@ namespace UNLAM_PW3_20161C {
     
     
     public partial class _default {
+        
+        /// <summary>
+        /// ucMenuAnonimo1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucMenuAnonimo ucMenuAnonimo1;
     }
 }

@@ -81,7 +81,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anonimo.master.cs">
@@ -203,13 +202,6 @@
     </Compile>
     <Compile Include="ucMenuAnonimo.ascx.designer.cs">
       <DependentUpon>ucMenuAnonimo.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -11,5 +11,68 @@ namespace UNLAM_PW3_20161C {
     
     
     public partial class registracion {
+        
+        /// <summary>
+        /// ucMenuAnonimo1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucMenuAnonimo ucMenuAnonimo1;
+        
+        /// <summary>
+        /// txtNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        
+        /// <summary>
+        /// txtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// txtContrasenia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtContrasenia;
+        
+        /// <summary>
+        /// txtConfirmacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtConfirmacion;
+        
+        /// <summary>
+        /// rblPerfil control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblPerfil;
+        
+        /// <summary>
+        /// btnRegistrarse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegistrarse;
     }
 }
