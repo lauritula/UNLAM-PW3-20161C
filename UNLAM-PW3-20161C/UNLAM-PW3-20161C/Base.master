@@ -1,18 +1,29 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base.master.cs" Inherits="UNLAM_PW3_20161C.Base" %>
 
+<%@ Register src="ucMenuAnonimo.ascx" tagname="ucMenuAnonimo" tagprefix="uc1" %>
+<%@ Register src="cocineros/ucMenuCocinero.ascx" tagname="ucMenuCocinero" tagprefix="uc2" %>
+<%@ Register src="comensales/ucMenuComensal.ascx" tagname="ucMenuComensal" tagprefix="uc3" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="style/bootstrap.css" rel="stylesheet" type="text/css" />
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
+    <asp:ContentPlaceHolder ID="baseHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <asp:ContentPlaceHolder ID="baseBody" runat="server">
+        <uc1:ucMenuAnonimo ID="ucMenuAnonimo1" runat="server" />
+        <br />
+        <uc2:ucMenuCocinero ID="ucMenuCocinero1" runat="server" />
+        <br />
+        <uc3:ucMenuComensal ID="ucMenuComensal1" runat="server" />
+            
         
         </asp:ContentPlaceHolder>
     </div>

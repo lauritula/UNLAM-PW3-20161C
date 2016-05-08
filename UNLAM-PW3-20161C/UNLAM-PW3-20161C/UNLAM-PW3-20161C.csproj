@@ -71,6 +71,9 @@
     <Content Include="login.aspx" />
     <Content Include="registracion.aspx" />
     <Content Include="style\bootstrap.css" />
+    <Content Include="cocineros\ucMenuCocinero.ascx" />
+    <Content Include="comensales\ucMenuComensal.ascx" />
+    <Content Include="ucMenuAnonimo.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -78,6 +81,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anonimo.master.cs">
@@ -89,6 +93,7 @@
     </Compile>
     <Compile Include="Base.master.cs">
       <DependentUpon>Base.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Base.master.designer.cs">
       <DependentUpon>Base.master</DependentUpon>
@@ -177,6 +182,34 @@
     </Compile>
     <Compile Include="registracion.aspx.designer.cs">
       <DependentUpon>registracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cocineros\ucMenuCocinero.ascx.cs">
+      <DependentUpon>ucMenuCocinero.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cocineros\ucMenuCocinero.ascx.designer.cs">
+      <DependentUpon>ucMenuCocinero.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="comensales\ucMenuComensal.ascx.cs">
+      <DependentUpon>ucMenuComensal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="comensales\ucMenuComensal.ascx.designer.cs">
+      <DependentUpon>ucMenuComensal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucMenuAnonimo.ascx.cs">
+      <DependentUpon>ucMenuAnonimo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucMenuAnonimo.ascx.designer.cs">
+      <DependentUpon>ucMenuAnonimo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
