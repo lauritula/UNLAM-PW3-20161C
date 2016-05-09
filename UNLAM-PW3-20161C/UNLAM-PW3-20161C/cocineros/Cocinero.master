@@ -1,5 +1,20 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Base.master" AutoEventWireup="true" CodeBehind="Cocinero.master.cs" Inherits="UNLAM_PW3_20161C.cocineros.Cocinero" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+<%@ Register Src="~/cocineros/ucMenuCocinero.ascx" TagPrefix="uc1" TagName="ucMenuCocinero" %>
+
+<asp:Content ID="head" ContentPlaceHolderID="baseHead" runat="server">
+    <asp:ContentPlaceHolder ID="cocineroHead" runat="server">
+    </asp:ContentPlaceHolder>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="cabecera" ContentPlaceHolderID="baseCabecera" runat="server">
+    <asp:ContentPlaceHolder ID="cocineroCabecera" runat="server">
+
+        <uc1:ucmenucocinero runat="server" id="ucMenuCocinero" />
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="body" ContentPlaceHolderID="baseBody" runat="server">
+    <asp:ContentPlaceHolder ID="cocineroBody" runat="server">
+    
+    </asp:ContentPlaceHolder>
 </asp:Content>

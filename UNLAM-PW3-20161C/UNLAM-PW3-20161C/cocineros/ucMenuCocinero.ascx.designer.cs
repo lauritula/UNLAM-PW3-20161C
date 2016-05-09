@@ -10,51 +10,51 @@
 namespace UNLAM_PW3_20161C {
     
     
-    public partial class Base {
+    public partial class ucMenuCocinero {
         
         /// <summary>
-        /// Control baseHead.
+        /// Control Panel1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder baseHead;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// Control form1.
+        /// Control hlRecetas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.HyperLink hlRecetas;
         
         /// <summary>
-        /// Control baseCabecera.
+        /// Control hlPerfil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder baseCabecera;
+        protected global::System.Web.UI.WebControls.HyperLink hlPerfil;
         
         /// <summary>
-        /// Control baseBody.
+        /// Control hlCancelar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder baseBody;
+        protected global::System.Web.UI.WebControls.HyperLink hlCancelar;
         
         /// <summary>
-        /// Control basePie.
+        /// Control hlEventos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder basePie;
+        protected global::System.Web.UI.WebControls.HyperLink hlEventos;
     }
 }

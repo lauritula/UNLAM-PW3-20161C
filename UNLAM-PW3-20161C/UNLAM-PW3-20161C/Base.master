@@ -1,20 +1,32 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base.master.cs" Inherits="UNLAM_PW3_20161C.Base" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
+<link href="style/bootstrap.css" rel="stylesheet" type="text/css" />
+    <title>Cocin@rte</title>
+    <asp:ContentPlaceHolder ID="baseHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    <form id="form1" runat="server" class="form-horizontal">
+    <div class="contenedor">
+    <div class="cabecera">
+        <asp:ContentPlaceHolder ID="baseCabecera" runat="server">
         
         </asp:ContentPlaceHolder>
+    </div>
+    <div class="contenido">
+        <asp:ContentPlaceHolder ID="baseBody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="pie">
+        <asp:ContentPlaceHolder ID="basePie" runat="server">
+        <div class="panel panel-primary"><div class="panel-heading">Programacion Web III - Grupo 2</div></div>
+        </asp:ContentPlaceHolder>
+    </div>
     </div>
     </form>
 </body>

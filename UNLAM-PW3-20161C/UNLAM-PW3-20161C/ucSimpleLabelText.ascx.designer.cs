@@ -10,51 +10,33 @@
 namespace UNLAM_PW3_20161C {
     
     
-    public partial class Base {
+    public partial class ucSimpleLabelText {
         
         /// <summary>
-        /// Control baseHead.
+        /// Control lblTextBox.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder baseHead;
+        protected global::System.Web.UI.WebControls.Label lblTextBox;
         
         /// <summary>
-        /// Control form1.
+        /// Control txtBox.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtBox;
         
         /// <summary>
-        /// Control baseCabecera.
+        /// Control rfvRequerido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder baseCabecera;
-        
-        /// <summary>
-        /// Control baseBody.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder baseBody;
-        
-        /// <summary>
-        /// Control basePie.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder basePie;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvRequerido;
     }
 }

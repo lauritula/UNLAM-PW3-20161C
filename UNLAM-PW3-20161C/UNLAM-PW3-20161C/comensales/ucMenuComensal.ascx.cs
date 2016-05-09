@@ -7,13 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace UNLAM_PW3_20161C
 {
-    public partial class login : System.Web.UI.Page
+    public partial class ucMenuComensal : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            sltEmail.textoLabel = "Email: ";
-            sltPassword.textoLabel = "Contraseña: ";
-            sltPassword.TextMode = TextBoxMode.Password;
 
         }
     }
