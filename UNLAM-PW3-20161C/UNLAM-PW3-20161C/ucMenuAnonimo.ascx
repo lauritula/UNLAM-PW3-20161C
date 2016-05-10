@@ -3,8 +3,7 @@
     
     <asp:HyperLink ID="hlInicio" runat="server" NavigateUrl="~/default.aspx" CssClass="btn btn-primary">Inicio</asp:HyperLink>
     <asp:HyperLink ID="hlLogin" runat="server" NavigateUrl="~/login.aspx" CssClass="btn btn-primary">Login</asp:HyperLink>
-    <asp:HyperLink ID="hlRegistracion" runat="server" 
-        NavigateUrl="~/registracion.aspx" CssClass="btn btn-primary">Registración</asp:HyperLink>
+    <asp:HyperLink ID="hlRegistracion" runat="server" NavigateUrl="~/registracion.aspx" CssClass="btn btn-primary">Registración</asp:HyperLink>
     
 </asp:Panel>
 

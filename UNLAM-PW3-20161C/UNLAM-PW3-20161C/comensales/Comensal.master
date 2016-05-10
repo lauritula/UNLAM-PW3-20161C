@@ -7,11 +7,13 @@
     </asp:ContentPlaceHolder>
 </asp:Content>
 <asp:Content ID="cabecera" ContentPlaceHolderID="baseCabecera" runat="server">
+    <div class="cabecera">
     <asp:ContentPlaceHolder ID="comensalCabecera" runat="server">
 
         <uc1:ucmenucomensal runat="server" id="ucMenuComensal" />
 
     </asp:ContentPlaceHolder>
+    </div>
 </asp:Content>
 <asp:Content ID="body" ContentPlaceHolderID="baseBody" runat="server">
     <asp:ContentPlaceHolder ID="comensalBody" runat="server">

@@ -19,7 +19,20 @@ html {
 }
 body {
   margin: 0;
+ background-image: url(../img/background.jpg);
+ background-attachment:fixed;
+ 
 }
+
+.cabecera {
+    height:200px;
+    width:100%;
+    background-color:#d9534f;
+}
+.contenido {
+    padding: 10px;
+}
+
 article,
 aside,
 details,
@@ -1589,22 +1602,22 @@ pre code {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  background-color:#2b3e50;
+  border-radius:5px;
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 550px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 670px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 870px;
   }
 }
 .container-fluid {

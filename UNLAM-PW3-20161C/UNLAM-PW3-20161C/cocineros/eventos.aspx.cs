@@ -11,6 +11,22 @@ namespace UNLAM_PW3_20161C.cocineros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            sltNombreEvento.textoLabel = "Nombre del Evento: ";
+            sltDescripcion.textoLabel = "Descripcion: ";
+            sltCantComensales.textoLabel = "Cantidad de Comensales: ";
+            sltUbicacion.textoLabel = "Ubicacion del Evento: ";
+            sltFotoEvento.textoLabel = "Foto del Evento: ";
+           
+
+        }
+
+        protected void btnCrearEvento_Click(object sender, EventArgs e)
+        {
+            string nombreEvento = sltNombreEvento.textoTextbox;
+            string descripcion = sltDescripcion.textoTextbox;
+            string cantComensales = sltCantComensales.textoTextbox;
+            string ubicacion = sltUbicacion.textoTextbox;
+            string foto = sltFotoEvento.textoTextbox;
 
         }
     }

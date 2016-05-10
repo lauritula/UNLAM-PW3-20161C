@@ -11,6 +11,9 @@ namespace UNLAM_PW3_20161C.cocineros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            sltEmailPerfil.textoLabel = "Email: ";
+            sltFechaRegistro.textoLabel = "Fecha de Registro: ";
+            sltRecetasPerfil.textoLabel = "Cantidad de recetas: ";
 
         }
     }

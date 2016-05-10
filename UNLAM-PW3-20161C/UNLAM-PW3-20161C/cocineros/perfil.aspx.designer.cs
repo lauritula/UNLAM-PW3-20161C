@@ -13,67 +13,31 @@ namespace UNLAM_PW3_20161C.cocineros {
     public partial class perfil {
         
         /// <summary>
-        /// Control lblPerfilCocinero.
+        /// Control sltFechaRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPerfilCocinero;
+        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltFechaRegistro;
         
         /// <summary>
-        /// Control lblFechaRegistracion.
+        /// Control sltEmailPerfil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFechaRegistracion;
+        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltEmailPerfil;
         
         /// <summary>
-        /// Control txtFechaRegistro.
+        /// Control sltRecetasPerfil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaRegistro;
-        
-        /// <summary>
-        /// Control lblEmail.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmail;
-        
-        /// <summary>
-        /// Control txtEmail.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
-        
-        /// <summary>
-        /// Control lblCantidadRecetas.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCantidadRecetas;
-        
-        /// <summary>
-        /// Control cantRecetasPerfil.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cantRecetasPerfil;
+        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltRecetasPerfil;
         
         /// <summary>
         /// Control lblRecetasPerfil.
