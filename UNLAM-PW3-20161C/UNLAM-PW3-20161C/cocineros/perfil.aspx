@@ -19,6 +19,7 @@
     <br />
     <asp:Label ID="lblEventosPerfil" runat="server" Text="Sus eventos: " CssClass="col-lg-2 control-label"></asp:Label>
     <br />
+    <br />
     <asp:Button ID="btnVolverPerfil" runat="server" Text="Volver" CssClass="btn btn-primary"/>
     <br />
 

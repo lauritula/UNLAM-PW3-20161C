@@ -10,14 +10,13 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    
+    <form id="form1" runat="server" class="form-horizontal">
     <div class="container">
-    
         <asp:ContentPlaceHolder ID="baseCabecera" runat="server">
         
         </asp:ContentPlaceHolder>
+
     
-    <form id="form1" runat="server" class="form-horizontal">
     <div class="contenido">
         <asp:ContentPlaceHolder ID="baseBody" runat="server">
         
@@ -28,8 +27,8 @@
         <div class="panel panel-primary"><div class="panel-heading">Programacion Web III - Grupo 2</div></div>
         </asp:ContentPlaceHolder>
     </div>
-    </form>
-    </div>
     
+    </div>
+    </form>
 </body>
 </html>

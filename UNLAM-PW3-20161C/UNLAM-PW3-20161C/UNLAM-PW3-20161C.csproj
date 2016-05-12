@@ -68,6 +68,7 @@
     <Content Include="comensales\reservar.aspx" />
     <Content Include="comensales\reservas.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="login.aspx" />
     <Content Include="registracion.aspx" />
     <Content Include="style\bootstrap.css" />
@@ -168,6 +169,9 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,6 +215,7 @@
     <Compile Include="ucSimpleLabelText.ascx.designer.cs">
       <DependentUpon>ucSimpleLabelText.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base.master" />

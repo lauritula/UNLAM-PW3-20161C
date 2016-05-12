@@ -1308,14 +1308,18 @@ p {
   margin: 0 0 10.5px;
 }
 .lead {
-  margin-bottom: 21px;
-  font-size: 17px;
+    color: #485563;
+
+  width:100%;
   font-weight: 300;
   line-height: 1.4;
+  padding-top:2px;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 22.5px;
+    font-size: 20px;
+    
+    
   }
 }
 small,

@@ -13,5 +13,22 @@ namespace UNLAM_PW3_20161C
         {
 
         }
+
+        public class SessionManager //no me acuerdo para que era... pero habia que ponerlo en el TP
+        {
+            private const String UsuarioKey = "usuario";
+
+            public static Usuario UsuarioActual
+            {
+                get
+                {
+                    return (Usuario)HttpContext.Current.Session[UsuarioKey];
+                }
+                set
+                {
+                    HttpContext.Current.Session[UsuarioKey] = value;
+                }
+            }
+        }
     }
 }

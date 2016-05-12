@@ -12,6 +12,10 @@
         <li><asp:HyperLink ID="hlComentarios" runat="server" 
         NavigateUrl="~/comensales/comentarios.aspx">Puntuacion y comentarios de eventos finalizados</asp:HyperLink></li>
       </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><asp:Label ID="lblUsuarioConectado" runat="server" Text="Label"></asp:Label></li>
+        <li><asp:LinkButton ID="lbLogOut" runat="server" OnClick="lbLogOut_Click"  CssClass="btn btn-default" CausesValidation="False">Cerrar Sesion</asp:LinkButton></li>
+        </ul>
       </div>
     </nav>
 </asp:Panel>

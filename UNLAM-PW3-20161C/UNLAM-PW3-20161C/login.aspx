@@ -7,9 +7,11 @@
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="anonimoBody">
     <uc1:ucMenuAnonimo ID="ucMenuAnonimo1" runat="server" />
+    <br />
     <uc2:ucSimpleLabelText runat="server" id="sltEmail" />
     <br />
     <uc2:ucSimpleLabelText runat="server" id="sltPassword" TextMode="Password"/>
     <br />
-    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar"  CssClass="btn btn-primary"/>
+    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar"  CssClass="btn btn-primary" OnClick="btnIngresar_Click"/>
+    <asp:Label ID="lblErrorLogin" runat="server" Text="Usuario o Contraseña Incorrecto" CssClass="text-danger" Visible="False"></asp:Label>
 </asp:Content>
