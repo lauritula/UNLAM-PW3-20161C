@@ -12,7 +12,7 @@
 <uc1:ucSimpleLabelText runat="server" ID="sltNombreEvento" />
     <br />
     <asp:Label ID="lblFechaEvento" runat="server" Text="Fecha del evento: " CssClass="col-lg-2 control-label"></asp:Label>
-    <asp:Calendar ID="fechaEvento" runat="server"></asp:Calendar>
+     <asp:Calendar ID="fechaEvento" runat="server" ></asp:Calendar>
     <br />
 <uc1:ucSimpleLabelText runat="server" ID="sltDescripcion" />
         <br />

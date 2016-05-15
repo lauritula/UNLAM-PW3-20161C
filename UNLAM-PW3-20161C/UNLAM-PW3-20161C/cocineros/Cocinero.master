@@ -8,10 +8,11 @@
 </asp:Content>
 <asp:Content ID="cabecera" ContentPlaceHolderID="baseCabecera" runat="server">
        
-     <asp:ContentPlaceHolder ID="cocineroCabecera" runat="server">
-        <div class="cabecera">
+    <asp:ContentPlaceHolder ID="cocineroCabecera" runat="server">
+    <div class="cabecera">
+        <img src="../img/baner.jpg" class="banner"/>
         <uc1:ucmenucocinero runat="server" id="ucMenuCocinero" />
-        </div>
+    </div>
     </asp:ContentPlaceHolder>    
     
 </asp:Content>

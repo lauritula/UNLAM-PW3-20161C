@@ -24,7 +24,7 @@ namespace UNLAM_PW3_20161C
             string password = sltPassword.textoTextbox;
             string tipousuario = "anonimo";
 
-            if (email == "cocinero@cocinarte.com" && password == "cocinero")
+            if (email == "cocinero@bodegon.com" && password == "cocinero")
             {
                 tipousuario = "cocinero";
                 Session["usuario"] = email;
@@ -36,7 +36,7 @@ namespace UNLAM_PW3_20161C
 
                 Response.Redirect("cocineros/perfil.aspx");
             }
-            else if (email == "comensal@cocinarte.com" && password == "comensal")
+            else if (email == "comensal@bodegon.com" && password == "comensal")
             {
                 tipousuario = "comensal";
 

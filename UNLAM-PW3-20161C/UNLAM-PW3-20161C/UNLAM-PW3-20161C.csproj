@@ -74,6 +74,10 @@
     <Content Include="style\bootstrap.css" />
     <Content Include="cocineros\ucMenuCocinero.ascx" />
     <Content Include="comensales\ucMenuComensal.ascx" />
+    <Content Include="style\calendar.css" />
+    <Content Include="style\style1.css" />
+    <Content Include="ucEventoReciente.ascx" />
+    <Content Include="ucListado.ascx" />
     <Content Include="ucMenuAnonimo.ascx" />
     <Content Include="ucSimpleLabelText.ascx" />
     <Content Include="Web.config" />
@@ -200,6 +204,20 @@
     </Compile>
     <Compile Include="comensales\ucMenuComensal.ascx.designer.cs">
       <DependentUpon>ucMenuComensal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucEventoReciente.ascx.cs">
+      <DependentUpon>ucEventoReciente.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucEventoReciente.ascx.designer.cs">
+      <DependentUpon>ucEventoReciente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucListado.ascx.cs">
+      <DependentUpon>ucListado.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucListado.ascx.designer.cs">
+      <DependentUpon>ucListado.ascx</DependentUpon>
     </Compile>
     <Compile Include="ucMenuAnonimo.ascx.cs">
       <DependentUpon>ucMenuAnonimo.ascx</DependentUpon>

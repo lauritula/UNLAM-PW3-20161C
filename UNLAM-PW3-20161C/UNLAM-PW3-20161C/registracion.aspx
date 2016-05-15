@@ -21,8 +21,7 @@
     <asp:CompareValidator ID="cvMismaContraseña" runat="server" Display="Dynamic" CssClass="text-danger" ErrorMessage="Deben ser campos iguales" ControlToCompare="sltPassword$txtBox" ControlToValidate="sltConPassword$txtBox"></asp:CompareValidator>
     <br />
     <asp:Label ID="lblPerfil" runat="server" Text="Perfil: " CssClass="col-lg-2 control-label"></asp:Label>
-    <asp:RadioButtonList ID="rblPerfil" runat="server" Height="16px" 
-        Width="251px" >
+    <asp:RadioButtonList ID="rblPerfil" runat="server" Height="16px" Width="251px" >
         <asp:ListItem>Cocinero</asp:ListItem>
         <asp:ListItem>Comensal</asp:ListItem>
     </asp:RadioButtonList><asp:RequiredFieldValidator ID="rfvPerfil" runat="server" CssClass="text-danger" ErrorMessage="Campo requerido" ControlToValidate="rblPerfil" Display="Dynamic"></asp:RequiredFieldValidator>

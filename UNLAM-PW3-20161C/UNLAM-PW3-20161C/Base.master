@@ -5,13 +5,14 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="style/bootstrap.css" rel="stylesheet" type="text/css" />
-    <title>Cocin@rte</title>
+<link href="style/calendar.css" rel="stylesheet" type="text/css"/>
+    <title>B.ON!</title>
     <asp:ContentPlaceHolder ID="baseHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server" class="form-horizontal">
-    <div class="container">
+   <form id="form1" runat="server" class="form-horizontal">
+   <div class="container">
         <asp:ContentPlaceHolder ID="baseCabecera" runat="server">
         
         </asp:ContentPlaceHolder>
@@ -28,7 +29,7 @@
         </asp:ContentPlaceHolder>
     </div>
     
-    </div>
-    </form>
+   </div>
+   </form>
 </body>
 </html>

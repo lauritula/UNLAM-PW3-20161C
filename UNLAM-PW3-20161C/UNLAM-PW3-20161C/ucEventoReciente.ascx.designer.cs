@@ -10,69 +10,51 @@
 namespace UNLAM_PW3_20161C {
     
     
-    public partial class _default {
+    public partial class ucEventoReciente {
         
         /// <summary>
-        /// Control ucMenuAnonimo1.
+        /// Control hlEventoReciente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucMenuAnonimo ucMenuAnonimo1;
+        protected global::System.Web.UI.WebControls.HyperLink hlEventoReciente;
         
         /// <summary>
-        /// Control ucEventoReciente.
+        /// Control imgEvento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucEventoReciente ucEventoReciente;
+        protected global::System.Web.UI.WebControls.Image imgEvento;
         
         /// <summary>
-        /// Control ucEventoReciente1.
+        /// Control lblPrecio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucEventoReciente ucEventoReciente1;
+        protected global::System.Web.UI.WebControls.Label lblPrecio;
         
         /// <summary>
-        /// Control ucEventoReciente2.
+        /// Control lblNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucEventoReciente ucEventoReciente2;
+        protected global::System.Web.UI.WebControls.Label lblNombre;
         
         /// <summary>
-        /// Control ucEventoReciente3.
+        /// Control lblPuntuacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucEventoReciente ucEventoReciente3;
-        
-        /// <summary>
-        /// Control ucEventoReciente4.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucEventoReciente ucEventoReciente4;
-        
-        /// <summary>
-        /// Control ucEventoReciente5.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucEventoReciente ucEventoReciente5;
+        protected global::System.Web.UI.WebControls.Label lblPuntuacion;
     }
 }

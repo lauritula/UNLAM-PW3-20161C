@@ -9,7 +9,8 @@
         <li><asp:HyperLink ID="hlEventos" runat="server" NavigateUrl="~/cocineros/eventos.aspx">Crear Evento de Cocina</asp:HyperLink></li>
       </ul>
          <ul class="nav navbar-nav navbar-right">
-        <li><asp:Label ID="lblUsuarioConectado" runat="server" Text="Label"></asp:Label></li>
+        <li><asp:Label ID="lblUsuarioConectado" runat="server" Text="Label" CssClass="navbar-brand"></asp:Label>
+            </li>
         <li><asp:LinkButton ID="lbLogOut" runat="server" OnClick="lbLogOut_Click" CssClass="btn btn-default" CausesValidation="False">Cerrar Sesion</asp:LinkButton></li>
         </ul>
       </div>

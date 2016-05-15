@@ -13,31 +13,58 @@ namespace UNLAM_PW3_20161C.cocineros {
     public partial class perfil {
         
         /// <summary>
-        /// Control sltFechaRegistro.
+        /// Control lblFechaRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltFechaRegistro;
+        protected global::System.Web.UI.WebControls.Label lblFechaRegistro;
         
         /// <summary>
-        /// Control sltEmailPerfil.
+        /// Control lblFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltEmailPerfil;
+        protected global::System.Web.UI.WebControls.Label lblFecha;
         
         /// <summary>
-        /// Control sltRecetasPerfil.
+        /// Control lblEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltRecetasPerfil;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
+        
+        /// <summary>
+        /// Control lblEmail1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmail1;
+        
+        /// <summary>
+        /// Control lblCantRecetas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCantRecetas;
+        
+        /// <summary>
+        /// Control lblCantidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCantidad;
         
         /// <summary>
         /// Control lblRecetasPerfil.
@@ -49,6 +76,15 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Label lblRecetasPerfil;
         
         /// <summary>
+        /// Control ucRecetas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucListado ucRecetas;
+        
+        /// <summary>
         /// Control lblEventosPerfil.
         /// </summary>
         /// <remarks>
@@ -58,12 +94,12 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Label lblEventosPerfil;
         
         /// <summary>
-        /// Control btnVolverPerfil.
+        /// Control ucEventos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVolverPerfil;
+        protected global::UNLAM_PW3_20161C.ucListado ucEventos;
     }
 }

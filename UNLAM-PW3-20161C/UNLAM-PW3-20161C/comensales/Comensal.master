@@ -7,13 +7,14 @@
     </asp:ContentPlaceHolder>
 </asp:Content>
 <asp:Content ID="cabecera" ContentPlaceHolderID="baseCabecera" runat="server">
-    <div class="cabecera">
+    
     <asp:ContentPlaceHolder ID="comensalCabecera" runat="server">
-
+    <div class="cabecera">
+        <img src="../img/baner.jpg" class="banner"/>
         <uc1:ucmenucomensal runat="server" id="ucMenuComensal" />
-
-    </asp:ContentPlaceHolder>
     </div>
+    </asp:ContentPlaceHolder>
+   
 </asp:Content>
 <asp:Content ID="body" ContentPlaceHolderID="baseBody" runat="server">
     <asp:ContentPlaceHolder ID="comensalBody" runat="server">
