@@ -11,24 +11,7 @@ namespace UNLAM_PW3_20161C
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Usuario objUsuario = (Usuario)Session["objUsuario"];
-            if (objUsuario == null)
-            {
-            }
-            else
-            {
-                switch (objUsuario.TipoUsuario)
-                {
-                    case "comensal":
-                        Response.Redirect("~/comensarles/reservas.aspx");
-                        break;
-                    case "cocinero":
-                        Response.Redirect("~/cocineros/perfil.aspx");
-                        break;
-                    default:
-                        break;
-                }
-            }
+            
         }
     }
 }
