@@ -72,8 +72,8 @@
     <Content Include="login.aspx" />
     <Content Include="registracion.aspx" />
     <Content Include="style\bootstrap.css" />
-    <Content Include="cocineros\ucMenuCocinero.ascx" />
-    <Content Include="comensales\ucMenuComensal.ascx" />
+    <Content Include="ucMenuCocinero.ascx" />
+    <Content Include="ucMenuComensal.ascx" />
     <Content Include="style\calendar.css" />
     <Content Include="style\style1.css" />
     <Content Include="ucEventoReciente.ascx" />
@@ -191,18 +191,18 @@
     <Compile Include="registracion.aspx.designer.cs">
       <DependentUpon>registracion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cocineros\ucMenuCocinero.ascx.cs">
+    <Compile Include="ucMenuCocinero.ascx.cs">
       <DependentUpon>ucMenuCocinero.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cocineros\ucMenuCocinero.ascx.designer.cs">
+    <Compile Include="ucMenuCocinero.ascx.designer.cs">
       <DependentUpon>ucMenuCocinero.ascx</DependentUpon>
     </Compile>
-    <Compile Include="comensales\ucMenuComensal.ascx.cs">
+    <Compile Include="ucMenuComensal.ascx.cs">
       <DependentUpon>ucMenuComensal.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="comensales\ucMenuComensal.ascx.designer.cs">
+    <Compile Include="ucMenuComensal.ascx.designer.cs">
       <DependentUpon>ucMenuComensal.ascx</DependentUpon>
     </Compile>
     <Compile Include="ucEventoReciente.ascx.cs">

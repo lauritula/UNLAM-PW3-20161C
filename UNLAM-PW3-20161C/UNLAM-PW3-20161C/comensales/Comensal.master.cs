@@ -11,7 +11,22 @@ namespace UNLAM_PW3_20161C.comensales
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Usuario objUsuario = (Usuario)Session["objUsuario"];
+            if (objUsuario == null)
+            {
+                Response.Redirect("~/default.aspx");
+            }
+            else
+            {
+                switch (objUsuario.TipoUsuario)
+                {
+                    case "cocinero":
+                        Response.Redirect("~/cocineros/perfil.aspx");
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 }

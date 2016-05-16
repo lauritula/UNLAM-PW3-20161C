@@ -13,15 +13,6 @@ namespace UNLAM_PW3_20161C {
     public partial class login {
         
         /// <summary>
-        /// Control ucMenuAnonimo1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucMenuAnonimo ucMenuAnonimo1;
-        
-        /// <summary>
         /// Control sltEmail.
         /// </summary>
         /// <remarks>

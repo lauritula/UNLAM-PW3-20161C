@@ -22,32 +22,31 @@ namespace UNLAM_PW3_20161C
         {
             string email = sltEmail.textoTextbox;
             string password = sltPassword.textoTextbox;
-            string tipousuario = "anonimo";
+            string tipoUsuario = "anonimo";
 
             if (email == "cocinero@bodegon.com" && password == "cocinero")
             {
-                tipousuario = "cocinero";
-                Session["usuario"] = email;
-
+                tipoUsuario = "cocinero";
+                HttpContext.Current.Session["usuario"] = email;
                 var objUsuario = new Usuario();
                 objUsuario.User = email;
-                objUsuario.TipoUsuario = tipousuario;
+                objUsuario.TipoUsuario = tipoUsuario;
                 Session["objUsuario"] = objUsuario;
-
+                Session.Add( tipoUsuario, objUsuario);
                 Response.Redirect("cocineros/perfil.aspx");
+
             }
             else if (email == "comensal@bodegon.com" && password == "comensal")
             {
-                tipousuario = "comensal";
-
+                tipoUsuario = "comensal";
                 Session["usuario"] = email;
-
                 var objUsuario = new Usuario();
                 objUsuario.User = email;
-                objUsuario.TipoUsuario = tipousuario;
+                objUsuario.TipoUsuario = tipoUsuario;
                 Session["objUsuario"] = objUsuario;
-
+                Session.Add(tipoUsuario, objUsuario);
                 Response.Redirect("comensales/reservas.aspx");
+
             }
             else
             {

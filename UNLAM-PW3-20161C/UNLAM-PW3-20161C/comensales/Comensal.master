@@ -1,22 +1,9 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Base.master" AutoEventWireup="true" CodeBehind="Comensal.master.cs" Inherits="UNLAM_PW3_20161C.comensales.Comensal" %>
 
-<%@ Register Src="~/comensales/ucMenuComensal.ascx" TagPrefix="uc1" TagName="ucMenuComensal" %>
 
-<asp:Content ID="head" ContentPlaceHolderID="baseHead" runat="server">
-    <asp:ContentPlaceHolder ID="comensalHead" runat="server">
-    </asp:ContentPlaceHolder>
-</asp:Content>
-<asp:Content ID="cabecera" ContentPlaceHolderID="baseCabecera" runat="server">
-    
-    <asp:ContentPlaceHolder ID="comensalCabecera" runat="server">
-    <div class="cabecera">
-        <img src="../img/baner.jpg" class="banner"/>
-        <uc1:ucmenucomensal runat="server" id="ucMenuComensal" />
-    </div>
-    </asp:ContentPlaceHolder>
-   
-</asp:Content>
+
 <asp:Content ID="body" ContentPlaceHolderID="baseBody" runat="server">
     <asp:ContentPlaceHolder ID="comensalBody" runat="server">
+
     </asp:ContentPlaceHolder>
 </asp:Content>

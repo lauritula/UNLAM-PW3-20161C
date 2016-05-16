@@ -13,24 +13,6 @@ namespace UNLAM_PW3_20161C {
     public partial class Anonimo {
         
         /// <summary>
-        /// Control anonimoHead.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder anonimoHead;
-        
-        /// <summary>
-        /// Control ucMenuAnonimo1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucMenuAnonimo ucMenuAnonimo1;
-        
-        /// <summary>
         /// Control anonimoBody.
         /// </summary>
         /// <remarks>

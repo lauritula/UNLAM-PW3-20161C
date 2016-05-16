@@ -1,4 +1,9 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base.master.cs" Inherits="UNLAM_PW3_20161C.Base" %>
+
+<%@ Register Src="~/ucMenuAnonimo.ascx" TagPrefix="uc1" TagName="ucMenuAnonimo" %>
+<%@ Register Src="~/ucMenuCocinero.ascx" TagPrefix="uc2" TagName="ucMenuCocinero" %>
+<%@ Register Src="~/ucMenuComensal.ascx" TagPrefix="uc3" TagName="ucMenuComensal" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -6,30 +11,37 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="style/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="style/calendar.css" rel="stylesheet" type="text/css"/>
-    <title>B.ON!</title>
+<link href="style/style1.css" rel="stylesheet" type="text/css"/>
+<title>B.ON!</title>
     <asp:ContentPlaceHolder ID="baseHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-   <form id="form1" runat="server" class="form-horizontal">
-   <div class="container">
+<form id="form1" runat="server" class="form-horizontal">
+   <div id="container" class="container">
         <asp:ContentPlaceHolder ID="baseCabecera" runat="server">
-        
+            <uc2:ucMenuCocinero runat="server" ID="ucMenuCocinero" />
+            <uc3:ucMenuComensal runat="server" ID="ucMenuComensal" />
+            <uc1:ucMenuAnonimo runat="server" ID="ucMenuAnonimo" />
         </asp:ContentPlaceHolder>
-
     
-    <div class="contenido">
+    <div id="contenido" class="contenido">
         <asp:ContentPlaceHolder ID="baseBody" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
-    <div class="pie">
+
+    <div id="pie" class="pie">
         <asp:ContentPlaceHolder ID="basePie" runat="server">
-        <div class="panel panel-primary"><div class="panel-heading">Programacion Web III - Grupo 2</div></div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Programacion Web III - Grupo 2
+            </div>
+        </div>
         </asp:ContentPlaceHolder>
     </div>
     
    </div>
-   </form>
+</form>
 </body>
 </html>

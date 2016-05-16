@@ -1,4 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucMenuCocinero.ascx.cs" Inherits="UNLAM_PW3_20161C.ucMenuCocinero" %>
+
+<div id="cabecera" class="cabecera">
+<img src="../img/baner.jpg" class="banner"/>
 <asp:Panel ID="Panel1" runat="server">
     <nav class="navbar navbar-inverse">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -16,3 +19,4 @@
       </div>
     </nav>
 </asp:Panel>
+</div>

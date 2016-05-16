@@ -40,6 +40,33 @@ namespace UNLAM_PW3_20161C {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder baseCabecera;
         
         /// <summary>
+        /// Control ucMenuCocinero.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucMenuCocinero ucMenuCocinero;
+        
+        /// <summary>
+        /// Control ucMenuComensal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucMenuComensal ucMenuComensal;
+        
+        /// <summary>
+        /// Control ucMenuAnonimo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucMenuAnonimo ucMenuAnonimo;
+        
+        /// <summary>
         /// Control baseBody.
         /// </summary>
         /// <remarks>

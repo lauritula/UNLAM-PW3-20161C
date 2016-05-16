@@ -2,9 +2,6 @@
 
 <%@ Register Src="~/ucSimpleLabelText.ascx" TagPrefix="uc1" TagName="ucSimpleLabelText" %>
 
-<asp:Content ID="head" ContentPlaceHolderID="cocineroHead" runat="server">
-
-</asp:Content>
 <asp:Content ID="body" ContentPlaceHolderID="cocineroBody" runat="server">
 
     <h1>Cree su receta</h1>

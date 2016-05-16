@@ -2,13 +2,7 @@
 <%@ Register src="ucMenuAnonimo.ascx" tagname="ucMenuAnonimo" tagprefix="uc1" %>
 <%@ Register Src="ucEventoReciente.ascx" TagPrefix="uc2" TagName="ucEventoReciente" %>
 
-
-
-<asp:Content ID="head" ContentPlaceHolderID="anonimoHead" runat="server">
-
-</asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="anonimoBody">
-    <uc1:ucMenuAnonimo ID="ucMenuAnonimo1" runat="server" />
     <div id="eventosRecientes">
         <uc2:ucEventoReciente runat="server" id="ucEventoReciente" />
         <uc2:ucEventoReciente runat="server" ID="ucEventoReciente1" />

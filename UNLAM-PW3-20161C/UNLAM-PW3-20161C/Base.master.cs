@@ -11,24 +11,41 @@ namespace UNLAM_PW3_20161C
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+                Usuario objUsuario = (Usuario)Session["objUsuario"];
+                if (objUsuario == null)
+                {
+                    ucMenuComensal.Visible = false;
+                    ucMenuCocinero.Visible = false;
+                }
+                else
+                {
+                    switch (objUsuario.TipoUsuario)
+                    {
+                        case "cocinero":
+                            ucMenuComensal.Visible = false;
+                            ucMenuAnonimo.Visible = false;
+                            break;
+                        case "comensal":
+                            ucMenuCocinero.Visible = false;
+                            ucMenuAnonimo.Visible = false;
+                            break;
+                        default:
+                            ucMenuComensal.Visible = false;
+                            ucMenuCocinero.Visible = false;
+                            break;
+                    }
+                }
+            
+
+            
+
+    //        
+    //       tipoUsuario = Request.Cookies["objUsuario"]["tipoUsuario"];   
+            
+
+          
 
         }
 
-        public class SessionManager //no me acuerdo para que era... pero habia que ponerlo en el TP
-        {
-            private const String UsuarioKey = "usuario";
-
-            public static Usuario UsuarioActual
-            {
-                get
-                {
-                    return (Usuario)HttpContext.Current.Session[UsuarioKey];
-                }
-                set
-                {
-                    HttpContext.Current.Session[UsuarioKey] = value;
-                }
-            }
-        }
     }
 }
