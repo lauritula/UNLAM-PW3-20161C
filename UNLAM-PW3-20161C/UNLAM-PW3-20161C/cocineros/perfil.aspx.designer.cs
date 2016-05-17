@@ -13,31 +13,22 @@ namespace UNLAM_PW3_20161C.cocineros {
     public partial class perfil {
         
         /// <summary>
-        /// Control lblPerfilCocinero.
+        /// Control lblFechaRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPerfilCocinero;
+        protected global::System.Web.UI.WebControls.Label lblFechaRegistro;
         
         /// <summary>
-        /// Control lblFechaRegistracion.
+        /// Control lblFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFechaRegistracion;
-        
-        /// <summary>
-        /// Control txtFechaRegistro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaRegistro;
+        protected global::System.Web.UI.WebControls.Label lblFecha;
         
         /// <summary>
         /// Control lblEmail.
@@ -49,31 +40,31 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// Control txtEmail.
+        /// Control lblEmail1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.Label lblEmail1;
         
         /// <summary>
-        /// Control lblCantidadRecetas.
+        /// Control lblCantRecetas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCantidadRecetas;
+        protected global::System.Web.UI.WebControls.Label lblCantRecetas;
         
         /// <summary>
-        /// Control cantRecetasPerfil.
+        /// Control lblCantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cantRecetasPerfil;
+        protected global::System.Web.UI.WebControls.Label lblCantidad;
         
         /// <summary>
         /// Control lblRecetasPerfil.
@@ -85,6 +76,15 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Label lblRecetasPerfil;
         
         /// <summary>
+        /// Control ucRecetas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucListado ucRecetas;
+        
+        /// <summary>
         /// Control lblEventosPerfil.
         /// </summary>
         /// <remarks>
@@ -94,12 +94,12 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Label lblEventosPerfil;
         
         /// <summary>
-        /// Control btnVolverPerfil.
+        /// Control ucEventos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVolverPerfil;
+        protected global::UNLAM_PW3_20161C.ucListado ucEventos;
     }
 }

@@ -1,18 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Anonimo.master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="UNLAM_PW3_20161C.login" %>
 <%@ Register src="ucMenuAnonimo.ascx" tagname="ucMenuAnonimo" tagprefix="uc1" %>
-<asp:Content ID="head" ContentPlaceHolderID="anonimoHead" runat="server">
+<%@ Register Src="ucSimpleLabelText.ascx" TagPrefix="uc2" TagName="ucSimpleLabelText" %>
 
-</asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="anonimoBody">
-    <uc1:ucMenuAnonimo ID="ucMenuAnonimo1" runat="server" />
-     <p>
-    Email:
-    <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-</p>
-<p>
-    Contraseña:<asp:TextBox ID="txtContrasena" runat="server" TextMode="Password"></asp:TextBox>
-</p>
-<p>
-    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" />
-</p>
+    <br />
+    <uc2:ucSimpleLabelText runat="server" id="sltEmail" />
+    <br />
+    <uc2:ucSimpleLabelText runat="server" id="sltPassword" TextMode="Password"/>
+    <br />
+    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar"  CssClass="btn btn-primary" OnClick="btnIngresar_Click"/>
+    <asp:Label ID="lblErrorLogin" runat="server" Text="Usuario o Contraseña Incorrecto" CssClass="text-danger" Visible="False"></asp:Label>
 </asp:Content>

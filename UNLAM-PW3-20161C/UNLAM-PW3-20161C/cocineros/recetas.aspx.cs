@@ -11,6 +11,12 @@ namespace UNLAM_PW3_20161C.cocineros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            sltIngredientes.textoLabel = "Ingredientes: ";
+            sltRecetaDescripcion.textoLabel = "Descripcion y pasos de realizacion: ";
+            sltTiempoCoccion.textoLabel = "Tiempo de Coccion: ";
+            sltRecetaNombre.textoLabel = "Nombre: ";
+            sltRecetaDescripcion.TextMode = TextBoxMode.MultiLine;
+            sltIngredientes.TextMode = TextBoxMode.MultiLine;
 
         }
     }

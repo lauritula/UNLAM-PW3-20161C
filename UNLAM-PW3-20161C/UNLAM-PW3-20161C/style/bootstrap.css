@@ -17,9 +17,27 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
   margin: 0;
+ background-image: url(../img/background.jpg);
+ background-attachment:fixed;
+ 
 }
+
+.cabecera {
+    height:250px;
+    width:100%;
+
+}
+.banner {
+    width:100%;
+}
+.contenido {
+    padding: 10px;
+
+}
+
 article,
 aside,
 details,
@@ -1295,14 +1313,18 @@ p {
   margin: 0 0 10.5px;
 }
 .lead {
-  margin-bottom: 21px;
-  font-size: 17px;
+    color: #485563;
+
+  width:100%;
   font-weight: 300;
   line-height: 1.4;
+  padding-top:2px;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 22.5px;
+    font-size: 20px;
+    
+    
   }
 }
 small,
@@ -1589,22 +1611,25 @@ pre code {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  background-color:#2b3e50;
+  border-radius:5px;
+-webkit-box-shadow: 0px 0px 30px 1px rgba(50, 50, 50, 1);
+-moz-box-shadow:    0px 0px 30px 1px rgba(50, 50, 50, 1);
+box-shadow:         0px 0px 30px 1px rgba(50, 50, 50, 1);
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 550px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 670px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 870px;
   }
 }
 .container-fluid {
@@ -3636,7 +3661,7 @@ tbody.collapse.in {
 .navbar-fixed-bottom .dropdown .dropdown-menu {
   top: auto;
   bottom: 100%;
-  margin-bottom: 2px;
+
 }
 @media (min-width: 768px) {
   .navbar-right .dropdown-menu {
@@ -4280,9 +4305,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 9.5px 15px;
-  font-size: 19px;
+  font-size: 15px;
   line-height: 21px;
-  height: 40px;
+  height: 30px;
+  text-shadow:#7a7a7a 4px 3px 0;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {

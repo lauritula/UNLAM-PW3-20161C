@@ -1,9 +1,9 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Base.master" AutoEventWireup="true" CodeBehind="Comensal.master.cs" Inherits="UNLAM_PW3_20161C.comensales.Comensal" %>
-<asp:Content ID="head" ContentPlaceHolderID="baseHead" runat="server">
-    <asp:ContentPlaceHolder ID="comensalHead" runat="server">
-    </asp:ContentPlaceHolder>
-</asp:Content>
+
+
+
 <asp:Content ID="body" ContentPlaceHolderID="baseBody" runat="server">
     <asp:ContentPlaceHolder ID="comensalBody" runat="server">
+
     </asp:ContentPlaceHolder>
 </asp:Content>

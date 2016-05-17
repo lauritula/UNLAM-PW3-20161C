@@ -11,7 +11,41 @@ namespace UNLAM_PW3_20161C
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+                Usuario objUsuario = (Usuario)Session["objUsuario"];
+                if (objUsuario == null)
+                {
+                    ucMenuComensal.Visible = false;
+                    ucMenuCocinero.Visible = false;
+                }
+                else
+                {
+                    switch (objUsuario.TipoUsuario)
+                    {
+                        case "cocinero":
+                            ucMenuComensal.Visible = false;
+                            ucMenuAnonimo.Visible = false;
+                            break;
+                        case "comensal":
+                            ucMenuCocinero.Visible = false;
+                            ucMenuAnonimo.Visible = false;
+                            break;
+                        default:
+                            ucMenuComensal.Visible = false;
+                            ucMenuCocinero.Visible = false;
+                            break;
+                    }
+                }
+            
+
+            
+
+    //        
+    //       tipoUsuario = Request.Cookies["objUsuario"]["tipoUsuario"];   
+            
+
+          
 
         }
+
     }
 }

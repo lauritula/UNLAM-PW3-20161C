@@ -1,9 +1,9 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Base.master" AutoEventWireup="true" CodeBehind="Cocinero.master.cs" Inherits="UNLAM_PW3_20161C.cocineros.Cocinero" %>
-<asp:Content ID="head" ContentPlaceHolderID="baseHead" runat="server">
-    <asp:ContentPlaceHolder ID="cocineroHead" runat="server">
-    </asp:ContentPlaceHolder>
-</asp:Content>
+
+
+
 <asp:Content ID="body" ContentPlaceHolderID="baseBody" runat="server">
     <asp:ContentPlaceHolder ID="cocineroBody" runat="server">
+    
     </asp:ContentPlaceHolder>
 </asp:Content>

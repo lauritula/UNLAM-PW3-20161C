@@ -68,12 +68,18 @@
     <Content Include="comensales\reservar.aspx" />
     <Content Include="comensales\reservas.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="login.aspx" />
     <Content Include="registracion.aspx" />
     <Content Include="style\bootstrap.css" />
-    <Content Include="cocineros\ucMenuCocinero.ascx" />
-    <Content Include="comensales\ucMenuComensal.ascx" />
+    <Content Include="ucMenuCocinero.ascx" />
+    <Content Include="ucMenuComensal.ascx" />
+    <Content Include="style\calendar.css" />
+    <Content Include="style\style1.css" />
+    <Content Include="ucEventoReciente.ascx" />
+    <Content Include="ucListado.ascx" />
     <Content Include="ucMenuAnonimo.ascx" />
+    <Content Include="ucSimpleLabelText.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -167,6 +173,9 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,19 +191,33 @@
     <Compile Include="registracion.aspx.designer.cs">
       <DependentUpon>registracion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cocineros\ucMenuCocinero.ascx.cs">
+    <Compile Include="ucMenuCocinero.ascx.cs">
       <DependentUpon>ucMenuCocinero.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cocineros\ucMenuCocinero.ascx.designer.cs">
+    <Compile Include="ucMenuCocinero.ascx.designer.cs">
       <DependentUpon>ucMenuCocinero.ascx</DependentUpon>
     </Compile>
-    <Compile Include="comensales\ucMenuComensal.ascx.cs">
+    <Compile Include="ucMenuComensal.ascx.cs">
       <DependentUpon>ucMenuComensal.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="comensales\ucMenuComensal.ascx.designer.cs">
+    <Compile Include="ucMenuComensal.ascx.designer.cs">
       <DependentUpon>ucMenuComensal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucEventoReciente.ascx.cs">
+      <DependentUpon>ucEventoReciente.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucEventoReciente.ascx.designer.cs">
+      <DependentUpon>ucEventoReciente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucListado.ascx.cs">
+      <DependentUpon>ucListado.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucListado.ascx.designer.cs">
+      <DependentUpon>ucListado.ascx</DependentUpon>
     </Compile>
     <Compile Include="ucMenuAnonimo.ascx.cs">
       <DependentUpon>ucMenuAnonimo.ascx</DependentUpon>
@@ -203,6 +226,14 @@
     <Compile Include="ucMenuAnonimo.ascx.designer.cs">
       <DependentUpon>ucMenuAnonimo.ascx</DependentUpon>
     </Compile>
+    <Compile Include="ucSimpleLabelText.ascx.cs">
+      <DependentUpon>ucSimpleLabelText.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucSimpleLabelText.ascx.designer.cs">
+      <DependentUpon>ucSimpleLabelText.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base.master" />
@@ -215,6 +246,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="comensales\Comensal.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

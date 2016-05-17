@@ -13,31 +13,13 @@ namespace UNLAM_PW3_20161C.cocineros {
     public partial class eventos {
         
         /// <summary>
-        /// Control lblEvento.
+        /// Control sltNombreEvento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEvento;
-        
-        /// <summary>
-        /// Control lblNombreEvento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreEvento;
-        
-        /// <summary>
-        /// Control txtNombreEvento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreEvento;
+        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltNombreEvento;
         
         /// <summary>
         /// Control lblFechaEvento.
@@ -58,22 +40,31 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Calendar fechaEvento;
         
         /// <summary>
-        /// Control lblDescripcion.
+        /// Control sltDescripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescripcion;
+        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltDescripcion;
         
         /// <summary>
-        /// Control txtDescripcion.
+        /// Control sltCantComensales.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
+        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltCantComensales;
+        
+        /// <summary>
+        /// Control sltUbicacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltUbicacion;
         
         /// <summary>
         /// Control lblRecetas.
@@ -94,49 +85,13 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.DropDownList recetas;
         
         /// <summary>
-        /// Control lblCantComensales.
+        /// Control sltFotoEvento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCantComensales;
-        
-        /// <summary>
-        /// Control txtCantComensales.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantComensales;
-        
-        /// <summary>
-        /// Control lblUbicacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUbicacion;
-        
-        /// <summary>
-        /// Control txtUbicacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUbicacion;
-        
-        /// <summary>
-        /// Control lblFoto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFoto;
+        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltFotoEvento;
         
         /// <summary>
         /// Control btnCrearEvento.
