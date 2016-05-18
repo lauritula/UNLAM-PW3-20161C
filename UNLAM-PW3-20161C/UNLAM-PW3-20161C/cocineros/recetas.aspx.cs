@@ -9,6 +9,7 @@ namespace UNLAM_PW3_20161C.cocineros
 {
     public partial class recetas : System.Web.UI.Page
     {
+        CocineroRepositorio CocRepo = new CocineroRepositorio();
         protected void Page_Load(object sender, EventArgs e)
         {
             sltIngredientes.textoLabel = "Ingredientes: ";
@@ -17,6 +18,19 @@ namespace UNLAM_PW3_20161C.cocineros
             sltRecetaNombre.textoLabel = "Nombre: ";
             sltRecetaDescripcion.TextMode = TextBoxMode.MultiLine;
             sltIngredientes.TextMode = TextBoxMode.MultiLine;
+
+        }
+
+        protected void btnCargarReceta_Click(object sender, EventArgs e)
+        {
+            Receta nuevaReceta = new Receta();
+            nuevaReceta.nombreReceta = sltRecetaNombre.textoTextbox;
+            nuevaReceta.tiempoReceta = Convert.ToInt16(sltTiempoCoccion.textoTextbox);
+            nuevaReceta.tipoReceta = ingredientes.SelectedValue;
+            nuevaReceta.ingredientesReceta = sltIngredientes.textoTextbox;
+            nuevaReceta.descripcionPasosReceta = sltRecetaDescripcion.textoTextbox;
+            nuevaReceta.autorReceta = HttpContext.Current.Session["usuario"].ToString();
+            CocRepo.CrearReceta(nuevaReceta);
 
         }
     }

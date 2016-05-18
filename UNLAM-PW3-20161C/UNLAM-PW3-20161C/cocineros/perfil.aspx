@@ -19,13 +19,6 @@
     <asp:Label ID="lblRecetasPerfil" runat="server" Text="Sus recetas: " ></asp:Label>
     <asp:GridView ID="gvRecetasPerfil" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-        <Columns>
-            <asp:BoundField HeaderText="Nombre" />
-            <asp:BoundField HeaderText="Tiempo coccion" />
-            <asp:BoundField HeaderText="Descripsion" />
-            <asp:BoundField HeaderText="Ingredientes" />
-            <asp:BoundField HeaderText="Tipo" />
-        </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
