@@ -15,7 +15,8 @@ namespace UNLAM_PW3_20161C.cocineros
             sltDescripcion.textoLabel = "Descripcion: ";
             sltCantComensales.textoLabel = "Cantidad de Comensales: ";
             sltUbicacion.textoLabel = "Ubicacion del Evento: ";
-            sltFotoEvento.textoLabel = "Foto del Evento: ";
+    //        txtFotoEvento.Text = fuFotoEvento.FileContent.ToString();
+
            
 
         }
@@ -26,7 +27,6 @@ namespace UNLAM_PW3_20161C.cocineros
             string descripcion = sltDescripcion.textoTextbox;
             string cantComensales = sltCantComensales.textoTextbox;
             string ubicacion = sltUbicacion.textoTextbox;
-            string foto = sltFotoEvento.textoTextbox;
 
         }
     }

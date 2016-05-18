@@ -21,7 +21,7 @@ namespace UNLAM_PW3_20161C.cocineros
                 switch (objUsuario.TipoUsuario)
                 {
                     case "comensal":
-                        Response.Redirect("~/comensarles/reservas.aspx");
+                        Response.Redirect("~/comensales/reservas.aspx");
                         break;
                     default:
                         break;

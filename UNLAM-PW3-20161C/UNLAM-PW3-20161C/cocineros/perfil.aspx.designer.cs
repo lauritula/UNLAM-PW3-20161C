@@ -76,13 +76,13 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Label lblRecetasPerfil;
         
         /// <summary>
-        /// Control ucRecetas.
+        /// Control gvRecetasPerfil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucListado ucRecetas;
+        protected global::System.Web.UI.WebControls.GridView gvRecetasPerfil;
         
         /// <summary>
         /// Control lblEventosPerfil.
@@ -94,12 +94,12 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Label lblEventosPerfil;
         
         /// <summary>
-        /// Control ucEventos.
+        /// Control gvEventosPerfil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucListado ucEventos;
+        protected global::System.Web.UI.WebControls.GridView gvEventosPerfil;
     }
 }

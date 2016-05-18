@@ -31,6 +31,15 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltTiempoCoccion;
         
         /// <summary>
+        /// Control rvTiempoCoccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvTiempoCoccion;
+        
+        /// <summary>
         /// Control sltRecetaDescripcion.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace UNLAM_PW3_20161C.cocineros {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ingredientes;
+        
+        /// <summary>
+        /// Control rfvRequerido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvRequerido;
         
         /// <summary>
         /// Control btnCargarReceta.

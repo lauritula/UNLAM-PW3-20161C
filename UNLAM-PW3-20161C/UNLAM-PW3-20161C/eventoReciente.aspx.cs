@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace UNLAM_PW3_20161C
 {
-    public partial class ucMenuCocinero : System.Web.UI.UserControl
+    public partial class eventoReciente : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

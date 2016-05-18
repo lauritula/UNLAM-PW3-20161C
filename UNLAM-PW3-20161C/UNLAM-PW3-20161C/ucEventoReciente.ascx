@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucEventoReciente.ascx.cs" Inherits="UNLAM_PW3_20161C.ucEventoReciente" %>
 
-    <asp:HyperLink ID="hlEventoReciente" runat="server" CssClass="eventoReciente" NavigateUrl="~/x.aspx">
+    <asp:HyperLink ID="hlEventoReciente" runat="server" CssClass="eventoReciente" NavigateUrl="~/eventoReciente.aspx">
         <div id="evento1" class="evento1">
             <asp:Image ID="imgEvento" runat="server" CssClass="imgEvento" ImageUrl="img/eventos/x.jpg" /> 
             <div id="erPrecio">

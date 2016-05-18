@@ -13,7 +13,7 @@ namespace UNLAM_PW3_20161C.cocineros
         {
             sltIngredientes.textoLabel = "Ingredientes: ";
             sltRecetaDescripcion.textoLabel = "Descripcion y pasos de realizacion: ";
-            sltTiempoCoccion.textoLabel = "Tiempo de Coccion: ";
+            sltTiempoCoccion.textoLabel = "Tiempo de Coccion (min.): ";
             sltRecetaNombre.textoLabel = "Nombre: ";
             sltRecetaDescripcion.TextMode = TextBoxMode.MultiLine;
             sltIngredientes.TextMode = TextBoxMode.MultiLine;

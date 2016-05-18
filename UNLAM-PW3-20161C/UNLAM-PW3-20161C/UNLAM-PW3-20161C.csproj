@@ -68,6 +68,7 @@
     <Content Include="comensales\reservar.aspx" />
     <Content Include="comensales\reservas.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="eventoReciente.aspx" />
     <Content Include="Global.asax" />
     <Content Include="login.aspx" />
     <Content Include="registracion.aspx" />
@@ -172,6 +173,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="eventoReciente.aspx.cs">
+      <DependentUpon>eventoReciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="eventoReciente.aspx.designer.cs">
+      <DependentUpon>eventoReciente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

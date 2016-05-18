@@ -8,6 +8,7 @@
 <uc1:ucSimpleLabelText runat="server" ID="sltRecetaNombre" />
     <br />
 <uc1:ucSimpleLabelText runat="server" ID="sltTiempoCoccion" />
+    <asp:RangeValidator ID="rvTiempoCoccion" runat="server" ErrorMessage="Debe ingresar un tiempo valido en minutos" Display="Dynamic" CssClass="text-danger" ControlToValidate="sltTiempoCoccion$txtBox" MinimumValue="0" MaximumValue="9999"></asp:RangeValidator>
     <br />
 <uc1:ucSimpleLabelText runat="server" ID="sltRecetaDescripcion" />
     <br />
@@ -19,7 +20,7 @@
         <asp:ListItem>Gourmet</asp:ListItem>
         <asp:ListItem>Diet</asp:ListItem>
         <asp:ListItem>Casera</asp:ListItem>
-    </asp:DropDownList>
+    </asp:DropDownList><asp:RequiredFieldValidator ID="rfvRequerido" runat="server" ErrorMessage="Campo requerido" Display="Dynamic" CssClass="text-danger" ControlToValidate="ingredientes"></asp:RequiredFieldValidator>
     <br />
     <asp:Button ID="btnCargarReceta" runat="server" Text="Cargar Receta" CssClass="btn btn-primary"/>
     <br />

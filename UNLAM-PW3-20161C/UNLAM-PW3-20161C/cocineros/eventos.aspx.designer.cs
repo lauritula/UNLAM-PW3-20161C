@@ -31,13 +31,13 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Label lblFechaEvento;
         
         /// <summary>
-        /// Control fechaEvento.
+        /// Control cFechaEvento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar fechaEvento;
+        protected global::System.Web.UI.WebControls.Calendar cFechaEvento;
         
         /// <summary>
         /// Control sltDescripcion.
@@ -76,22 +76,49 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Label lblRecetas;
         
         /// <summary>
-        /// Control recetas.
+        /// Control cblRecetas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList recetas;
+        protected global::System.Web.UI.WebControls.CheckBoxList cblRecetas;
         
         /// <summary>
-        /// Control sltFotoEvento.
+        /// Control lblFotoEvento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltFotoEvento;
+        protected global::System.Web.UI.WebControls.Label lblFotoEvento;
+        
+        /// <summary>
+        /// Control fuFotoEvento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuFotoEvento;
+        
+        /// <summary>
+        /// Control txtFotoEvento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFotoEvento;
+        
+        /// <summary>
+        /// Control rfvRequerido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvRequerido;
         
         /// <summary>
         /// Control btnCrearEvento.
