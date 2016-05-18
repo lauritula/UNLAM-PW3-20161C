@@ -175,7 +175,6 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Evento.cs" />
     <Compile Include="eventoReciente.aspx.cs">
       <DependentUpon>eventoReciente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -259,6 +258,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{4368e28c-ac23-463a-9de1-ce65c7cb0ef8}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositorio\Repositorio.csproj">
+      <Project>{b95e4add-befc-4088-8aa0-f2bd49c6e503}</Project>
+      <Name>Repositorio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

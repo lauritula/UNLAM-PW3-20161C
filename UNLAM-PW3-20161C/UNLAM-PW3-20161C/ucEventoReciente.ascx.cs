@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entidades;
+
 
 namespace UNLAM_PW3_20161C
 {
@@ -38,15 +40,20 @@ namespace UNLAM_PW3_20161C
 
         protected void lbEventoReciente_Click(object sender, EventArgs e)
         {
-            Evento eventoReciente = new Evento();
+            Evento eventoRecientes = new Evento();
 
-            eventoReciente.Nombre = lblNombre.Text;
+            eventoRecientes.nombreEvento = lblNombre.Text;
             string Precio = lblPrecio.Text;
-            eventoReciente.Precio = Convert.ToDouble(Precio);
+            eventoRecientes.precioEvento = Convert.ToDouble(Precio);
             string Puntuacion = lblPuntuacion.Text;
-            eventoReciente.Puntuacion = Convert.ToDecimal(Puntuacion);
-            eventoReciente.Foto = imgEvento.ImageUrl;
+            eventoRecientes.puntuacionEvento = Convert.ToDecimal(Puntuacion);
+            eventoRecientes.fotoEvento = imgEvento.ImageUrl;
 
+            string urlDestino = string.Format("~/eventoReciente.aspx?n={0}&pr={1}&pu={2}&f={3}",
+                eventoRecientes.nombreEvento, eventoRecientes.precioEvento, eventoRecientes.puntuacionEvento, eventoRecientes.fotoEvento);//qs-destino.aspx?u=Pepe&s=Masculino
+            Server.Transfer(urlDestino);
+
+     //       Response.Redirect("~/eventoReciente.aspx");
 
 
         }

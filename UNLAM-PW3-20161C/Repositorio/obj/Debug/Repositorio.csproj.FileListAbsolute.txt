@@ -1,0 +1,7 @@
+C:\Users\Julian\Documents\Visual Studio 2012\Projects\UNLAM-PW3-20161C\UNLAM-PW3-20161C\Repositorio\bin\Debug\Repositorio.dll
+C:\Users\Julian\Documents\Visual Studio 2012\Projects\UNLAM-PW3-20161C\UNLAM-PW3-20161C\Repositorio\bin\Debug\Repositorio.pdb
+C:\Users\Julian\Documents\Visual Studio 2012\Projects\UNLAM-PW3-20161C\UNLAM-PW3-20161C\Repositorio\bin\Debug\Entidades.dll
+C:\Users\Julian\Documents\Visual Studio 2012\Projects\UNLAM-PW3-20161C\UNLAM-PW3-20161C\Repositorio\bin\Debug\Entidades.pdb
+C:\Users\Julian\Documents\Visual Studio 2012\Projects\UNLAM-PW3-20161C\UNLAM-PW3-20161C\Repositorio\obj\Debug\Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\Julian\Documents\Visual Studio 2012\Projects\UNLAM-PW3-20161C\UNLAM-PW3-20161C\Repositorio\obj\Debug\Repositorio.dll
+C:\Users\Julian\Documents\Visual Studio 2012\Projects\UNLAM-PW3-20161C\UNLAM-PW3-20161C\Repositorio\obj\Debug\Repositorio.pdb

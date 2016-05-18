@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNLAM-PW3-20161C", "UNLAM-PW3-20161C\UNLAM-PW3-20161C.csproj", "{DB7D581A-4988-4BC4-A1C8-5F8A341A9980}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{4368E28C-AC23-463A-9DE1-CE65C7CB0EF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio", "Repositorio\Repositorio.csproj", "{B95E4ADD-BEFC-4088-8AA0-F2BD49C6E503}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{DB7D581A-4988-4BC4-A1C8-5F8A341A9980}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB7D581A-4988-4BC4-A1C8-5F8A341A9980}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB7D581A-4988-4BC4-A1C8-5F8A341A9980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4368E28C-AC23-463A-9DE1-CE65C7CB0EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4368E28C-AC23-463A-9DE1-CE65C7CB0EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4368E28C-AC23-463A-9DE1-CE65C7CB0EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4368E28C-AC23-463A-9DE1-CE65C7CB0EF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95E4ADD-BEFC-4088-8AA0-F2BD49C6E503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95E4ADD-BEFC-4088-8AA0-F2BD49C6E503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95E4ADD-BEFC-4088-8AA0-F2BD49C6E503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95E4ADD-BEFC-4088-8AA0-F2BD49C6E503}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 
-namespace UNLAM_PW3_20161C
+namespace Entidades
 {
     public class Evento
     {
@@ -16,7 +17,7 @@ namespace UNLAM_PW3_20161C
         public string direccionEvento { get; set; }
         public decimal puntuacionEvento { get; set; }
         public string fotoEvento { get; set; }
-        //public List<Comentario> comentariosEvento { get; set; }
+   //     public List<Comentario> comentariosEvento { get; set; }
         public string statusEvento { get; set; }
     }
 }
