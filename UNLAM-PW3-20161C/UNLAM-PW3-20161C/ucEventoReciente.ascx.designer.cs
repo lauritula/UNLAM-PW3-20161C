@@ -13,13 +13,13 @@ namespace UNLAM_PW3_20161C {
     public partial class ucEventoReciente {
         
         /// <summary>
-        /// Control hlEventoReciente.
+        /// Control lbEventoReciente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlEventoReciente;
+        protected global::System.Web.UI.WebControls.LinkButton lbEventoReciente;
         
         /// <summary>
         /// Control imgEvento.

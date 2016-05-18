@@ -30,13 +30,24 @@ namespace UNLAM_PW3_20161C
             set { imgEvento.ImageUrl = value; }
         }
 
-        public string eventoSource
-        {
-            get { return hlEventoReciente.NavigateUrl; }
-            set { hlEventoReciente.NavigateUrl = value; }
-        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected void lbEventoReciente_Click(object sender, EventArgs e)
+        {
+            Evento eventoReciente = new Evento();
+
+            eventoReciente.Nombre = lblNombre.Text;
+            string Precio = lblPrecio.Text;
+            eventoReciente.Precio = Convert.ToDouble(Precio);
+            string Puntuacion = lblPuntuacion.Text;
+            eventoReciente.Puntuacion = Convert.ToDecimal(Puntuacion);
+            eventoReciente.Foto = imgEvento.ImageUrl;
+
+
 
         }
     }
