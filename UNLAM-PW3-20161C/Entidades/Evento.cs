@@ -8,6 +8,8 @@ namespace Entidades
 {
     public class Evento
     {
+        public int idEvento { get; set; }
+        public string creadorEvento { get; set; }
         public string nombreEvento { get; set; }
         public string fechaEvento { get; set; }
         public string descripcionEvento { get; set; }
@@ -15,7 +17,7 @@ namespace Entidades
         public string recetasEvento { get; set; }
         public int comensalesEvento { get; set; }
         public string direccionEvento { get; set; }
-        public decimal puntuacionEvento { get; set; }
+        public double puntuacionEvento { get; set; }
         public string fotoEvento { get; set; }
    //     public List<Comentario> comentariosEvento { get; set; }
         public string statusEvento { get; set; }

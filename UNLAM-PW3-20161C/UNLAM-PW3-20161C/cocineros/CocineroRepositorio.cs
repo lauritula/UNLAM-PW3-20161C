@@ -6,22 +6,7 @@ using Entidades;
 
 namespace UNLAM_PW3_20161C
 {
-    
-    public class Receta
-    {
-        public string nombreReceta { get; set; }
-        public int tiempoReceta { get; set; }
-        public string descripcionPasosReceta { get; set; }
-        public string ingredientesReceta { get; set; }
-        public string tipoReceta { get; set; }
-        public string autorReceta { get; set; }
-    }
-
-    public class Cocinero 
-    { 
-
-    }
-    
+   
     public class CocineroRepositorio
     {
         //////////EVENTOS
@@ -63,12 +48,74 @@ namespace UNLAM_PW3_20161C
             //{
                 //if (ev.fechaEvento == fechaActual)
                     //ev.statusEvento = "Finalizado";
-            //}
-            
+            //}            
         }
 
         //metodo de retorno de todos los eventos
-        public List<Evento> obtenerEventos(){return ListaEventos;}
+        public List<Evento> obtenerEventos()
+        {
+            return ListaEventos;
+        }
+
+        //metodo de retorno de eventos por usuario
+        public List<Evento> eventoPorUsuario(string autor)
+        {
+            List<Evento> eventoPorUser = new List<Evento>();
+            foreach (Evento ev in ListaEventos)
+            {
+                if (ev.creadorEvento == autor)
+                    eventoPorUser.Add(ev);
+            }
+            return eventoPorUser;
+        }
+
+        //carga ficticia de eventos
+        public void cargaFicticiaEventos()
+        {
+            Evento nuevoEvento = new Evento();
+            nuevoEvento.idEvento = 1;
+            nuevoEvento.nombreEvento = "China Meal";
+            nuevoEvento.fechaEvento = "24/12/2015";
+            nuevoEvento.descripcionEvento = "Desgustacion de platos Asiaticos";
+            nuevoEvento.precioEvento = 200;
+            nuevoEvento.recetasEvento = "ChowFan";
+            nuevoEvento.comensalesEvento = 20;
+            nuevoEvento.direccionEvento = "Av. Rivadavia 2031";
+            nuevoEvento.puntuacionEvento = 7.5 ;
+            nuevoEvento.statusEvento = "Finalizado";
+            nuevoEvento.creadorEvento = "cocinero@bodegon.com";
+            ListaEventos.Add(nuevoEvento);
+
+            Evento nuevoEvento1 = new Evento();
+            nuevoEvento1.idEvento = 1;
+            nuevoEvento1.nombreEvento = "China Meal";
+            nuevoEvento1.fechaEvento = "24/12/2015";
+            nuevoEvento1.descripcionEvento = "Desgustacion de platos Asiaticos";
+            nuevoEvento1.precioEvento = 200;
+            nuevoEvento1.recetasEvento = "ChowFan";
+            nuevoEvento1.comensalesEvento = 20;
+            nuevoEvento1.direccionEvento = "Av. Rivadavia 2031";
+            nuevoEvento1.puntuacionEvento = 7.5;
+            nuevoEvento1.statusEvento = "Finalizado";
+            nuevoEvento1.creadorEvento="cocinero@bodegon.com";
+            ListaEventos.Add(nuevoEvento1);
+
+            Evento nuevoEvento2 = new Evento();
+            nuevoEvento2.idEvento = 1;
+            nuevoEvento2.nombreEvento = "China Meal";
+            nuevoEvento2.fechaEvento = "24/12/2015";
+            nuevoEvento2.descripcionEvento = "Desgustacion de platos Asiaticos";
+            nuevoEvento2.precioEvento = 200;
+            nuevoEvento2.recetasEvento = "ChowFan";
+            nuevoEvento2.comensalesEvento = 20;
+            nuevoEvento2.direccionEvento = "Av. Rivadavia 2031";
+            nuevoEvento2.puntuacionEvento = 7.5;
+            nuevoEvento2.statusEvento = "Finalizado";
+            nuevoEvento2.creadorEvento ="cocinero@bodegon.com";
+            ListaEventos.Add(nuevoEvento2);
+
+        }
+
 
         //////////RECETAS
 

@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using UNLAM_PW3_20161C;
 using Entidades;
 
 
-namespace UNLAM_PW3_20161C
+namespace Repositorio
 {
     public class ComentariosRepositorio
     {
@@ -43,7 +42,7 @@ namespace UNLAM_PW3_20161C
                 }
             }
 
-           throw new Exception("empleado no encontrado");
+           throw new Exception("Comentario no encontrado");
                         
         }
 

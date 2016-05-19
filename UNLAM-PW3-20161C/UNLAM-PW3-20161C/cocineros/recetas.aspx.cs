@@ -4,12 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entidades;
 
 namespace UNLAM_PW3_20161C.cocineros
 {
     public partial class recetas : System.Web.UI.Page
     {
         CocineroRepositorio CocRepo = new CocineroRepositorio();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             sltIngredientes.textoLabel = "Ingredientes: ";

@@ -242,7 +242,6 @@
     <Compile Include="ucSimpleLabelText.ascx.designer.cs">
       <DependentUpon>ucSimpleLabelText.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base.master" />

@@ -15,9 +15,18 @@ namespace UNLAM_PW3_20161C.cocineros
         {
             if (!IsPostBack)
             {
+                CocRepo.cargaFicticiaEventos();
+                CargarGrillaEventos();
                 CocRepo.cargaFicticiaRecetas();
                 CargarGrillaRecetas();
             }
+        }
+
+        private void CargarGrillaEventos()
+        {
+            string usuario = HttpContext.Current.Session["usuario"].ToString();
+            gvEventosPerfil.DataSource = CocRepo.eventoPorUsuario(usuario);
+            gvEventosPerfil.DataBind();
         }
 
         private void CargarGrillaRecetas()

@@ -46,7 +46,7 @@ namespace UNLAM_PW3_20161C
             string Precio = lblPrecio.Text;
             eventoRecientes.precioEvento = Convert.ToDouble(Precio);
             string Puntuacion = lblPuntuacion.Text;
-            eventoRecientes.puntuacionEvento = Convert.ToDecimal(Puntuacion);
+            eventoRecientes.puntuacionEvento = Convert.ToDouble(Puntuacion);
             eventoRecientes.fotoEvento = imgEvento.ImageUrl;
 
             string urlDestino = string.Format("~/eventoReciente.aspx?n={0}&pr={1}&pu={2}&f={3}",

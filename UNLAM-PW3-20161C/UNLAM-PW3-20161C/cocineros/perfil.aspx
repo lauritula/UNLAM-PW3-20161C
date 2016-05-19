@@ -17,32 +17,11 @@
     <asp:Label ID="lblCantidad" runat="server" Text="30"></asp:Label>
     <br />
     <asp:Label ID="lblRecetasPerfil" runat="server" Text="Sus recetas: " ></asp:Label>
-    <asp:GridView ID="gvRecetasPerfil" runat="server">
+    <asp:GridView ID="gvRecetasPerfil" runat="server" CssClass="table table-striped table-hover">
     </asp:GridView>
     <br />
     <asp:Label ID="lblEventosPerfil" runat="server" Text="Sus eventos: " ></asp:Label>
-    <asp:GridView ID="gvEventosPerfil" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
-        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-        <Columns>
-            <asp:BoundField HeaderText="Nombre" />
-            <asp:BoundField HeaderText="Fecha de Evento" />
-            <asp:BoundField HeaderText="Descripsion" />
-            <asp:BoundField HeaderText="Recetas propuestas" />
-            <asp:BoundField HeaderText="Cantidad maxima de comensales" />
-            <asp:BoundField HeaderText="Ubicacion" />
-            <asp:BoundField HeaderText="Foto" />
-            <asp:BoundField HeaderText="Precio" />
-        </Columns>
-        <EditRowStyle BackColor="#999999" />
-        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#E9E7E2" />
-        <SortedAscendingHeaderStyle BackColor="#506C8C" />
-        <SortedDescendingCellStyle BackColor="#FFFDF8" />
-        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+    <asp:GridView ID="gvEventosPerfil" runat="server" CssClass="table table-striped table-hover">
     </asp:GridView>
 
     <br />

@@ -31,6 +31,15 @@ namespace UNLAM_PW3_20161C {
         protected global::System.Web.UI.WebControls.Image imgEvento;
         
         /// <summary>
+        /// Control lblPrec.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPrec;
+        
+        /// <summary>
         /// Control lblSimbolo.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace UNLAM_PW3_20161C {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPrecio;
+        
+        /// <summary>
+        /// Control lblPuntua.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPuntua;
         
         /// <summary>
         /// Control lblPuntuacion.
