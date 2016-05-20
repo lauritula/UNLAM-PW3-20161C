@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Entidades;
+using Repositorio;
 
 namespace UNLAM_PW3_20161C.cocineros
 {

@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CocineroRepositorio.cs" />
+    <Compile Include="ComensalRepositorio.cs" />
     <Compile Include="ComentariosRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

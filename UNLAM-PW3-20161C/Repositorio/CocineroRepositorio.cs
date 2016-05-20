@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Entidades;
 
-namespace UNLAM_PW3_20161C
+namespace Repositorio
 {
    
     public class CocineroRepositorio
@@ -69,6 +69,17 @@ namespace UNLAM_PW3_20161C
             return eventoPorUser;
         }
 
+        //metodo de retorno de eventos por usuario
+        public List<Evento> eventoPorEstado(string estado, string autor)
+        {
+            List<Evento> eventoPorStatus = new List<Evento>();
+            foreach (Evento ev in ListaEventos)
+            {
+                if (ev.statusEvento != estado & ev.creadorEvento == autor)
+                    eventoPorStatus.Add(ev);
+            }
+            return eventoPorStatus;
+        }
         //carga ficticia de eventos
         public void cargaFicticiaEventos()
         {
@@ -81,7 +92,7 @@ namespace UNLAM_PW3_20161C
             nuevoEvento.recetasEvento = "ChowFan";
             nuevoEvento.comensalesEvento = 20;
             nuevoEvento.direccionEvento = "Av. Rivadavia 2031";
-            nuevoEvento.puntuacionEvento = 7.5 ;
+            nuevoEvento.puntuacionEvento = 7.5;
             nuevoEvento.statusEvento = "Finalizado";
             nuevoEvento.creadorEvento = "cocinero@bodegon.com";
             ListaEventos.Add(nuevoEvento);
@@ -97,7 +108,7 @@ namespace UNLAM_PW3_20161C
             nuevoEvento1.direccionEvento = "Av. Rivadavia 2031";
             nuevoEvento1.puntuacionEvento = 7.5;
             nuevoEvento1.statusEvento = "Finalizado";
-            nuevoEvento1.creadorEvento="cocinero@bodegon.com";
+            nuevoEvento1.creadorEvento = "cocinero@bodegon.com";
             ListaEventos.Add(nuevoEvento1);
 
             Evento nuevoEvento2 = new Evento();
@@ -111,6 +122,40 @@ namespace UNLAM_PW3_20161C
             nuevoEvento2.direccionEvento = "Av. Rivadavia 2031";
             nuevoEvento2.puntuacionEvento = 7.5;
             nuevoEvento2.statusEvento = "Finalizado";
+            nuevoEvento2.creadorEvento = "cocinero@bodegon.com";
+            ListaEventos.Add(nuevoEvento2);
+        }
+
+        //carga ficticia de eventos2
+        public void cargaFicticiaEventos2()
+        {
+            Evento nuevoEvento = new Evento();
+            nuevoEvento.idEvento = 1;
+            nuevoEvento.nombreEvento = "China Meal";
+            nuevoEvento.fechaEvento = "24/12/2015";
+            nuevoEvento.direccionEvento = "Av. Rivadavia 2031";
+            nuevoEvento.puntuacionEvento = 7.5 ;
+            nuevoEvento.statusEvento = "Finalizado";
+            nuevoEvento.creadorEvento = "cocinero@bodegon.com";
+            ListaEventos.Add(nuevoEvento);
+
+            Evento nuevoEvento1 = new Evento();
+            nuevoEvento1.idEvento = 2;
+            nuevoEvento1.nombreEvento = "Sushi Meal";
+            nuevoEvento1.fechaEvento = "24/12/2015";
+            nuevoEvento1.direccionEvento = "Av. Rivadavia 2031";
+            nuevoEvento1.puntuacionEvento = 7.5;
+            nuevoEvento1.statusEvento = "En curso";
+            nuevoEvento1.creadorEvento="cocinero@bodegon.com";
+            ListaEventos.Add(nuevoEvento1);
+
+            Evento nuevoEvento2 = new Evento();
+            nuevoEvento2.idEvento = 3;
+            nuevoEvento2.nombreEvento = "Todo pasta";
+            nuevoEvento2.fechaEvento = "24/12/2015";
+            nuevoEvento2.direccionEvento = "Av. Rivadavia 2031";
+            nuevoEvento2.puntuacionEvento = 7.5;
+            nuevoEvento2.statusEvento = "En curso";
             nuevoEvento2.creadorEvento ="cocinero@bodegon.com";
             ListaEventos.Add(nuevoEvento2);
 

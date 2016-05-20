@@ -104,7 +104,6 @@
     <Compile Include="Base.master.designer.cs">
       <DependentUpon>Base.master</DependentUpon>
     </Compile>
-    <Compile Include="cocineros\CocineroRepositorio.cs" />
     <Compile Include="cocineros\cancelar.aspx.cs">
       <DependentUpon>cancelar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
