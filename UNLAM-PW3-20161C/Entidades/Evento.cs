@@ -14,8 +14,10 @@ namespace Entidades
         public string fechaEvento { get; set; }
         public string descripcionEvento { get; set; }
         public double precioEvento { get; set; }
-        public List<Receta> recetasEvento { get; set; }
+ //       public List<Receta> recetasEvento { get; set; }
+        public string recetasEvento { get; set; }
         public int comensalesEvento { get; set; }
+        public int reservadosEvento { get; set; }
         public string direccionEvento { get; set; }
         public double puntuacionEvento { get; set; }
         public string fotoEvento { get; set; }

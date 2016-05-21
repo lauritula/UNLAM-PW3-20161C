@@ -69,7 +69,7 @@ namespace Repositorio
             return eventoPorUser;
         }
 
-        //metodo de retorno de eventos por usuario
+        //metodo de retorno de eventos por estado
         public List<Evento> eventoPorEstado(string estado, string autor)
         {
             List<Evento> eventoPorStatus = new List<Evento>();
@@ -80,6 +80,19 @@ namespace Repositorio
             }
             return eventoPorStatus;
         }
+
+        //Eventos disponibles para reservar
+        public List<Evento> eventoDisponibles(string estado)
+        {
+            List<Evento> eventoAReservar = new List<Evento>();
+            foreach (Evento ev in ListaEventos )
+            {
+                if (ev.statusEvento != estado & ev.comensalesEvento > ev.reservadosEvento)
+                    eventoAReservar.Add(ev);
+            }
+            return eventoAReservar;
+        }
+
         //carga ficticia de eventos
         public void cargaFicticiaEventos()
         {
@@ -134,7 +147,8 @@ namespace Repositorio
             nuevoEvento.nombreEvento = "China Meal";
             nuevoEvento.fechaEvento = "24/12/2015";
             nuevoEvento.direccionEvento = "Av. Rivadavia 2031";
-            nuevoEvento.puntuacionEvento = 7.5 ;
+            nuevoEvento.comensalesEvento = 20;
+            nuevoEvento.reservadosEvento = 2;
             nuevoEvento.statusEvento = "Finalizado";
             nuevoEvento.creadorEvento = "cocinero@bodegon.com";
             ListaEventos.Add(nuevoEvento);
@@ -144,9 +158,10 @@ namespace Repositorio
             nuevoEvento1.nombreEvento = "Sushi Meal";
             nuevoEvento1.fechaEvento = "24/12/2015";
             nuevoEvento1.direccionEvento = "Av. Rivadavia 2031";
-            nuevoEvento1.puntuacionEvento = 7.5;
+            nuevoEvento1.comensalesEvento = 20;
+            nuevoEvento1.reservadosEvento = 2;
             nuevoEvento1.statusEvento = "En curso";
-            nuevoEvento1.creadorEvento="cocinero@bodegon.com";
+            nuevoEvento1.creadorEvento = "cocinero@bodegon.com";
             ListaEventos.Add(nuevoEvento1);
 
             Evento nuevoEvento2 = new Evento();
@@ -154,9 +169,10 @@ namespace Repositorio
             nuevoEvento2.nombreEvento = "Todo pasta";
             nuevoEvento2.fechaEvento = "24/12/2015";
             nuevoEvento2.direccionEvento = "Av. Rivadavia 2031";
-            nuevoEvento2.puntuacionEvento = 7.5;
+            nuevoEvento2.comensalesEvento = 20;
+            nuevoEvento2.reservadosEvento = 2;
             nuevoEvento2.statusEvento = "En curso";
-            nuevoEvento2.creadorEvento ="cocinero@bodegon.com";
+            nuevoEvento2.creadorEvento = "cocinero@bodegon.com";
             ListaEventos.Add(nuevoEvento2);
 
         }

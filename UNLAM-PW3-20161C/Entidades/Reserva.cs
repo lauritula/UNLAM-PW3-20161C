@@ -12,5 +12,6 @@ namespace Entidades
         public string eventoReserva { get; set; }
         public string recetaReserva { get; set; }
         public int comensalesReserva { get; set; }
+        public string estadoReserva { get; set; }
     }
 }

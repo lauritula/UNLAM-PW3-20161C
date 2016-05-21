@@ -7,14 +7,17 @@
 
     <h1>Su perfíl</h1>
     <br />
-    <asp:Label ID="lblFechaRegistro" runat="server" Text="Fecha de registro: " ></asp:Label>
-    <asp:Label ID="lblFecha" runat="server" Text="20/15/2015"></asp:Label>
+    <asp:Label ID="lblFechaRegistro" runat="server" Text="Fecha de registro: " CssClass="col-lg-2 control-label"></asp:Label>
+    <asp:Label ID="lblFecha" runat="server" Text="20/15/2015" CssClass="col-lg-2 control-label"></asp:Label>
     <br />
-    <asp:Label ID="lblEmail" runat="server" Text="Email: " ></asp:Label>
-    <asp:Label ID="lblEmail1" runat="server" Text="maria@bodegon.com"></asp:Label>
     <br />
-    <asp:Label ID="lblCantRecetas" runat="server" Text="Cantidad de Recetas: "></asp:Label>
-    <asp:Label ID="lblCantidad" runat="server" Text="30"></asp:Label>
+    <br />
+    <asp:Label ID="lblEmail" runat="server" Text="Email: " CssClass="col-lg-2 control-label"></asp:Label>
+    <asp:Label ID="lblEmail1" runat="server" Text="maria@bodegon.com" CssClass="col-lg-2 control-label"></asp:Label>
+    <br /><br />
+    <asp:Label ID="lblCantRecetas" runat="server" Text="Cantidad de Recetas: " CssClass="col-lg-2 control-label"></asp:Label>
+    <asp:Label ID="lblCantidad" runat="server" Text="30" CssClass="col-lg-2 control-label"></asp:Label>
+    <br /><br />
     <br />
     <asp:Label ID="lblRecetasPerfil" runat="server" Text="Sus recetas: " ></asp:Label>
     <asp:GridView ID="gvRecetasPerfil" runat="server" CssClass="table table-striped table-hover">
