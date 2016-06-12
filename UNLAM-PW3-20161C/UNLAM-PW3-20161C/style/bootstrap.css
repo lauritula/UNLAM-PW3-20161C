@@ -2993,6 +2993,7 @@ select[multiple].input-lg {
     top: 0;
   }
 }
+
 .form-horizontal .radio,
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,
@@ -3008,12 +3009,14 @@ select[multiple].input-lg {
 .form-horizontal .form-group {
   margin-left: -15px;
   margin-right: -15px;
+  width:100%;
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
     padding-top: 9px;
+
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -3023,6 +3026,7 @@ select[multiple].input-lg {
   .form-horizontal .form-group-lg .control-label {
     padding-top: 13px;
     font-size: 19px;
+
   }
 }
 @media (min-width: 768px) {
@@ -6832,6 +6836,7 @@ button.close {
 table,
 .table {
   font-size: 12px;
+  width:100%;
 }
 table a:not(.btn),
 .table a:not(.btn) {

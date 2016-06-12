@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3fc9d66908ab41bcae05ae63ca415172" Name="Diagrama1" ZoomLevel="98">
+        <EntityTypeShape EntityType="PW3_TP_20161CModel.Comentarios" Width="1.5" PointX="3.375" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PW3_TP_20161CModel.Eventos" Width="1.5" PointX="1" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PW3_TP_20161CModel.Recetas" Width="1.5" PointX="5.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PW3_TP_20161CModel.Reservas" Width="1.5" PointX="7.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PW3_TP_20161CModel.Usuarios" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="PW3_TP_20161CModel.FK_Comentarios_Eventos" ManuallyRouted="false" />
+        <AssociationConnector Association="PW3_TP_20161CModel.FK_Comentarios_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="PW3_TP_20161CModel.FK_Eventos_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="PW3_TP_20161CModel.FK_Reservas_Eventos" ManuallyRouted="false" />
+        <AssociationConnector Association="PW3_TP_20161CModel.FK_Recetas_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="PW3_TP_20161CModel.FK_Reservas_Recetas" ManuallyRouted="false" />
+        <AssociationConnector Association="PW3_TP_20161CModel.FK_Reservas_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="PW3_TP_20161CModel.EventosRecetas" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

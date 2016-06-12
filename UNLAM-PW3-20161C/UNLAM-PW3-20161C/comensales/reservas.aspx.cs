@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using Entidades;
 using Repositorio;
 
@@ -19,14 +20,24 @@ namespace UNLAM_PW3_20161C.comensales
             {
                 ReserRepo.cargaFicticiaReserva();
                 CargarGrillaReservas();
+                CargarGrillaEventosFinalizados();
+
             }
         }
 
         private void CargarGrillaReservas()
         {
             string usuario = HttpContext.Current.Session["usuario"].ToString();
-            gvReservas.DataSource = ReserRepo.reservaPorUsuario(usuario);
-            gvReservas.DataBind();
+            gvReservasActivas.DataSource = ReserRepo.reservaFinalizados("En curso", usuario);
+            gvReservasActivas.DataBind();
+            
+        }
+
+        private void CargarGrillaEventosFinalizados()
+        {
+            string usuario = HttpContext.Current.Session["usuario"].ToString();
+            gvEventosFinalizados.DataSource = ReserRepo.reservaFinalizados("Finalizado", usuario);
+            gvEventosFinalizados.DataBind();
         }
               
     }

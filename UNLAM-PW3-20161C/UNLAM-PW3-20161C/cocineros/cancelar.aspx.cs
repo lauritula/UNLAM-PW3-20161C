@@ -10,7 +10,7 @@ using Entidades;
 namespace UNLAM_PW3_20161C.cocineros
 {
     public partial class cancelar : System.Web.UI.Page
-    {
+    {/*
         CocineroRepositorio CocRepo = new CocineroRepositorio();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -36,6 +36,6 @@ namespace UNLAM_PW3_20161C.cocineros
         {
          //   gvEventosCancelar.DataSource = CocRepo.cancelarEvento();
 
-        }
+        }*/
     }
 }

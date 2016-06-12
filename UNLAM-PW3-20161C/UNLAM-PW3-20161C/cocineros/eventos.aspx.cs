@@ -21,6 +21,44 @@ namespace UNLAM_PW3_20161C.cocineros
             sltUbicacion.textoLabel = "Ubicacion del Evento: ";
     //        txtFotoEvento.Text = fuFotoEvento.FileContent.ToString();
 
+            if (IsPostBack)
+            {
+                Boolean fileOK = false;
+                String path = Server.MapPath("~/img/eventos/");
+                if (fuFotoEvento.HasFile)
+                {
+                    txtFotoEvento.Text = fuFotoEvento.FileName;
+                    String fileExtension =
+                        System.IO.Path.GetExtension(fuFotoEvento.FileName).ToLower();
+                    String[] allowedExtensions = { ".gif", ".png", ".jpeg", ".jpg" };
+                    
+                    for (int i = 0; i < allowedExtensions.Length; i++)
+                    {
+                        if (fileExtension == allowedExtensions[i])
+                        {
+                            fileOK = true;
+                        }
+                    }
+                }
+
+                if (fileOK)
+                {
+                    try
+                    {
+                        fuFotoEvento.PostedFile.SaveAs(path
+                            + fuFotoEvento.FileName);
+                        lblFileOk.Text = "Subido con Exito.";
+                    }
+                    catch (Exception ex)
+                    {
+                        lblFileOk.Text = "La imagen no se pudo subir.";
+                    }
+                }
+                else
+                {
+                    lblFileOk.Text = "No se aceptan archivos de ese tipo.";
+                }
+            }
         }
 
         protected void btnCrearEvento_Click(object sender, EventArgs e)
@@ -30,14 +68,14 @@ namespace UNLAM_PW3_20161C.cocineros
             string cantComensales = sltCantComensales.textoTextbox;
             string ubicacion = sltUbicacion.textoTextbox;
 
-            Evento nuevoEvento = new Evento();
-            nuevoEvento.nombreEvento = nombreEvento;
-            nuevoEvento.descripcionEvento = descripcion;
-            nuevoEvento.comensalesEvento = Convert.ToInt32(cantComensales);
-            nuevoEvento.direccionEvento = ubicacion;
-            nuevoEvento.fechaEvento = Convert.ToString(cFechaEvento);
-            nuevoEvento.creadorEvento = HttpContext.Current.Session["usuario"].ToString();
-            nuevoEvento.recetasEvento = Convert.ToString(cblRecetas);
+            Eventos nuevoEvento = new Eventos();
+            nuevoEvento.Nombre = nombreEvento;
+            nuevoEvento.Descripcion = descripcion;
+            nuevoEvento.CantidadComensales = Convert.ToInt32(cantComensales);
+            nuevoEvento.Ubicacion = ubicacion;
+            nuevoEvento.Fecha = Convert.ToDateTime(cFechaEvento);
+            nuevoEvento.IdUsuario = Convert.ToInt32(HttpContext.Current.Session["usuario"]);
+   //         nuevoEvento.Recetas = cblRecetas;
             CocRepo.CrearEvento(nuevoEvento);
 
         }

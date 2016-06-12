@@ -13,15 +13,6 @@ namespace UNLAM_PW3_20161C.comensales {
     public partial class comentarios {
         
         /// <summary>
-        /// Control gvEventosFinalizados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvEventosFinalizados;
-        
-        /// <summary>
         /// Control lblPuntuacion.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace UNLAM_PW3_20161C.comensales {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox lbPuntacion;
+        
+        /// <summary>
+        /// Control rfvPuntuacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPuntuacion;
         
         /// <summary>
         /// Control sltComentario.

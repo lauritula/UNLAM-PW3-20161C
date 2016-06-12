@@ -17,9 +17,9 @@
     <br />
     <asp:Label ID="lblPerfil" runat="server" Text="Perfil: " CssClass="col-lg-2 control-label"></asp:Label>
     <asp:RadioButtonList ID="rblPerfil" runat="server" Height="16px" Width="251px" >
-        <asp:ListItem>Cocinero</asp:ListItem>
-        <asp:ListItem>Comensal</asp:ListItem>
-    </asp:RadioButtonList><asp:RequiredFieldValidator ID="rfvPerfil" runat="server" CssClass="text-danger" ErrorMessage="Campo requerido" ControlToValidate="rblPerfil" Display="Dynamic"></asp:RequiredFieldValidator>
+        <asp:ListItem Value="0">Cocinero</asp:ListItem>
+        <asp:ListItem Value="1">Comensal</asp:ListItem>
+    </asp:RadioButtonList><asp:RequiredFieldValidator ID="rfvPerfil" runat="server" CssClass="text-danger" ErrorMessage="Campo requerido" ControlToValidate="rblPerfil" Display="Dynamic" InitialValue=""></asp:RequiredFieldValidator>
     <asp:Button ID="btnRegistrarse" runat="server" Text="Registrarse" OnClick="btnRegistrarse_Click" CssClass="btn btn-primary"/>
 </asp:Content>
 

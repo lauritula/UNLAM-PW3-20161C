@@ -18,8 +18,9 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-<form id="form1" runat="server" class="form-horizontal">
+
    <div id="container" class="container">
+   <form id="form1" runat="server" class="form-horizontal">
         <asp:ContentPlaceHolder ID="baseCabecera" runat="server">
             <uc2:ucMenuCocinero runat="server" ID="ucMenuCocinero" />
             <uc3:ucMenuComensal runat="server" ID="ucMenuComensal" />
@@ -41,8 +42,8 @@
         </div>
         </asp:ContentPlaceHolder>
     </div>
-    
+   </form>
    </div>
-</form>
+
 </body>
 </html>

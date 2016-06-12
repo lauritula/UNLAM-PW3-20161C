@@ -10,8 +10,6 @@
         NavigateUrl="~/comensales/reservar.aspx">Reservar Evento</asp:HyperLink></li>
         <li><asp:HyperLink ID="hlReservas" runat="server" 
         NavigateUrl="~/comensales/reservas.aspx">Mis Reservas</asp:HyperLink></li>
-        <li><asp:HyperLink ID="hlComentarios" runat="server" 
-        NavigateUrl="~/comensales/comentarios.aspx">Puntuacion y comentarios de eventos finalizados</asp:HyperLink></li>
       </ul>
         <ul class="nav navbar-nav navbar-right">
         <li><asp:Label ID="lblUsuarioConectado" runat="server" Text="Label" CssClass="navbar-brand"></asp:Label></li>

@@ -28,6 +28,7 @@
     <asp:Label ID="lblFotoEvento" runat="server" Text="Foto del Evento: " CssClass="col-lg-2 control-label"></asp:Label>
     <asp:FileUpload ID="fuFotoEvento" runat="server" />
     <asp:TextBox ID="txtFotoEvento" runat="server" Visible="True" ReadOnly="True"></asp:TextBox>
+    <asp:Label ID="lblFileOk" runat="server" Text="" CssClass="text-danger"></asp:Label>
     <asp:RequiredFieldValidator ID="rfvRequerido" runat="server" ErrorMessage="Campo requerido" ControlToValidate="fuFotoEvento" Display="Dynamic" CssClass="text-danger"></asp:RequiredFieldValidator>      
     <br />
     <asp:Button ID="btnCrearEvento" runat="server" Text="Crear evento" OnClick="btnCrearEvento_Click" CssClass="btn btn-primary"/>

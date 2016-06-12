@@ -5,7 +5,7 @@ using System.Text;
 using System.Web;
 
 namespace Entidades
-{
+{ 
     public class Evento
     {
         public int idEvento { get; set; }

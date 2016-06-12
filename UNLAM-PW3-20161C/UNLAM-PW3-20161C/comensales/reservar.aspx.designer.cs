@@ -40,6 +40,15 @@ namespace UNLAM_PW3_20161C.comensales {
         protected global::System.Web.UI.WebControls.DropDownList ddlMenu;
         
         /// <summary>
+        /// Control rfvMenu.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMenu;
+        
+        /// <summary>
         /// Control sltReservaComensales.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace UNLAM_PW3_20161C.comensales {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltReservaComensales;
+        
+        /// <summary>
+        /// Control revCantComensales.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCantComensales;
         
         /// <summary>
         /// Control btnReservar.

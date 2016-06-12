@@ -30,7 +30,7 @@ namespace UNLAM_PW3_20161C
         private void CargarGrillaComentarios()
         {
 
-            gvComentarios.DataSource = ComentariosRepo.ObtenerTodos();
+            gvComentarios.DataSource = ComentariosRepo.ObtenerPorEvento(lblNombre.Text);
             gvComentarios.DataBind();
         }
     }

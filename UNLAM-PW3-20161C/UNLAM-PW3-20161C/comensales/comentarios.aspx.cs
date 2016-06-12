@@ -21,26 +21,23 @@ namespace UNLAM_PW3_20161C.comensales
 
             if (!IsPostBack)
             {
-                ReserRepo.cargaFicticiaReserva();
-                CargarGrillaEventosFinalizados();
+
             }
         }
 
-        private void CargarGrillaEventosFinalizados()
-        {
-            string usuario = HttpContext.Current.Session["usuario"].ToString();
-            gvEventosFinalizados.DataSource = ReserRepo.reservaFinalizados("Finalizado", usuario);
-            gvEventosFinalizados.DataBind();
-        }
+        
 
         protected void btnComentario_Click(object sender, EventArgs e)
         {
             Comentario nuevoComentario = new Comentario();
             nuevoComentario.comentarioDescripcion = sltComentario.textoTextbox;
             nuevoComentario.comentarioID = nuevoComentario.comentarioID + 1;
+            nuevoComentario.comentarioEvento = Request.QueryString["evento"];
             nuevoComentario.comentarioUsuario = HttpContext.Current.Session["usuario"].ToString();
 
             ComeRepo.Crear(nuevoComentario);
+            Response.Redirect("reservas.aspx");
+
         }
     }
 }

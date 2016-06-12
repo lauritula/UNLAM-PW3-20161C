@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PW3_TP_20161CModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="PW3_TP_20161CEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Comentarios" EntityType="PW3_TP_20161CModel.Comentarios" />
+    <EntitySet Name="Eventos" EntityType="PW3_TP_20161CModel.Eventos" />
+    <EntitySet Name="Recetas" EntityType="PW3_TP_20161CModel.Recetas" />
+    <EntitySet Name="Reservas" EntityType="PW3_TP_20161CModel.Reservas" />
+    <EntitySet Name="Usuarios" EntityType="PW3_TP_20161CModel.Usuarios" />
+    <AssociationSet Name="FK_Comentarios_Eventos" Association="PW3_TP_20161CModel.FK_Comentarios_Eventos">
+      <End Role="Eventos" EntitySet="Eventos" />
+      <End Role="Comentarios" EntitySet="Comentarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comentarios_Usuarios" Association="PW3_TP_20161CModel.FK_Comentarios_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Comentarios" EntitySet="Comentarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eventos_Usuarios" Association="PW3_TP_20161CModel.FK_Eventos_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Eventos" EntitySet="Eventos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservas_Eventos" Association="PW3_TP_20161CModel.FK_Reservas_Eventos">
+      <End Role="Eventos" EntitySet="Eventos" />
+      <End Role="Reservas" EntitySet="Reservas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recetas_Usuarios" Association="PW3_TP_20161CModel.FK_Recetas_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Recetas" EntitySet="Recetas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservas_Recetas" Association="PW3_TP_20161CModel.FK_Reservas_Recetas">
+      <End Role="Recetas" EntitySet="Recetas" />
+      <End Role="Reservas" EntitySet="Reservas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservas_Usuarios" Association="PW3_TP_20161CModel.FK_Reservas_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Reservas" EntitySet="Reservas" />
+    </AssociationSet>
+    <AssociationSet Name="EventosRecetas" Association="PW3_TP_20161CModel.EventosRecetas">
+      <End Role="Eventos" EntitySet="Eventos" />
+      <End Role="Recetas" EntitySet="Recetas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Comentarios">
+    <Key>
+      <PropertyRef Name="IdComentario" />
+    </Key>
+    <Property Name="IdComentario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEvento" Type="Int32" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="Puntuacion" Type="Byte" Nullable="false" />
+    <Property Name="Comentarios1" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Eventos" Relationship="PW3_TP_20161CModel.FK_Comentarios_Eventos" FromRole="Comentarios" ToRole="Eventos" />
+    <NavigationProperty Name="Usuarios" Relationship="PW3_TP_20161CModel.FK_Comentarios_Usuarios" FromRole="Comentarios" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Eventos">
+    <Key>
+      <PropertyRef Name="IdEvento" />
+    </Key>
+    <Property Name="IdEvento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="700" Unicode="true" FixedLength="false" />
+    <Property Name="CantidadComensales" Type="Int32" Nullable="false" />
+    <Property Name="Ubicacion" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
+    <Property Name="NombreFoto" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Precio" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Estado" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Comentarios" Relationship="PW3_TP_20161CModel.FK_Comentarios_Eventos" FromRole="Eventos" ToRole="Comentarios" />
+    <NavigationProperty Name="Usuarios" Relationship="PW3_TP_20161CModel.FK_Eventos_Usuarios" FromRole="Eventos" ToRole="Usuarios" />
+    <NavigationProperty Name="Reservas" Relationship="PW3_TP_20161CModel.FK_Reservas_Eventos" FromRole="Eventos" ToRole="Reservas" />
+    <NavigationProperty Name="Recetas" Relationship="PW3_TP_20161CModel.EventosRecetas" FromRole="Eventos" ToRole="Recetas" />
+  </EntityType>
+  <EntityType Name="Recetas">
+    <Key>
+      <PropertyRef Name="IdReceta" />
+    </Key>
+    <Property Name="IdReceta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TiempoCoccion" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="3000" Unicode="true" FixedLength="false" />
+    <Property Name="Ingredientes" Type="String" Nullable="false" MaxLength="3000" Unicode="true" FixedLength="false" />
+    <Property Name="Tipo" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Usuarios" Relationship="PW3_TP_20161CModel.FK_Recetas_Usuarios" FromRole="Recetas" ToRole="Usuarios" />
+    <NavigationProperty Name="Reservas" Relationship="PW3_TP_20161CModel.FK_Reservas_Recetas" FromRole="Recetas" ToRole="Reservas" />
+    <NavigationProperty Name="Eventos" Relationship="PW3_TP_20161CModel.EventosRecetas" FromRole="Recetas" ToRole="Eventos" />
+  </EntityType>
+  <EntityType Name="Reservas">
+    <Key>
+      <PropertyRef Name="IdReserva" />
+    </Key>
+    <Property Name="IdReserva" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="IdEvento" Type="Int32" Nullable="false" />
+    <Property Name="IdReceta" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Eventos" Relationship="PW3_TP_20161CModel.FK_Reservas_Eventos" FromRole="Reservas" ToRole="Eventos" />
+    <NavigationProperty Name="Recetas" Relationship="PW3_TP_20161CModel.FK_Reservas_Recetas" FromRole="Reservas" ToRole="Recetas" />
+    <NavigationProperty Name="Usuarios" Relationship="PW3_TP_20161CModel.FK_Reservas_Usuarios" FromRole="Reservas" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FechaRegistracion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdTipoUsuario" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Comentarios" Relationship="PW3_TP_20161CModel.FK_Comentarios_Usuarios" FromRole="Usuarios" ToRole="Comentarios" />
+    <NavigationProperty Name="Eventos" Relationship="PW3_TP_20161CModel.FK_Eventos_Usuarios" FromRole="Usuarios" ToRole="Eventos" />
+    <NavigationProperty Name="Recetas" Relationship="PW3_TP_20161CModel.FK_Recetas_Usuarios" FromRole="Usuarios" ToRole="Recetas" />
+    <NavigationProperty Name="Reservas" Relationship="PW3_TP_20161CModel.FK_Reservas_Usuarios" FromRole="Usuarios" ToRole="Reservas" />
+  </EntityType>
+  <Association Name="FK_Comentarios_Eventos">
+    <End Role="Eventos" Type="PW3_TP_20161CModel.Eventos" Multiplicity="1" />
+    <End Role="Comentarios" Type="PW3_TP_20161CModel.Comentarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eventos">
+        <PropertyRef Name="IdEvento" />
+      </Principal>
+      <Dependent Role="Comentarios">
+        <PropertyRef Name="IdEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comentarios_Usuarios">
+    <End Role="Usuarios" Type="PW3_TP_20161CModel.Usuarios" Multiplicity="1" />
+    <End Role="Comentarios" Type="PW3_TP_20161CModel.Comentarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Comentarios">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eventos_Usuarios">
+    <End Role="Usuarios" Type="PW3_TP_20161CModel.Usuarios" Multiplicity="1" />
+    <End Role="Eventos" Type="PW3_TP_20161CModel.Eventos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Eventos">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservas_Eventos">
+    <End Role="Eventos" Type="PW3_TP_20161CModel.Eventos" Multiplicity="1" />
+    <End Role="Reservas" Type="PW3_TP_20161CModel.Reservas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eventos">
+        <PropertyRef Name="IdEvento" />
+      </Principal>
+      <Dependent Role="Reservas">
+        <PropertyRef Name="IdEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recetas_Usuarios">
+    <End Role="Usuarios" Type="PW3_TP_20161CModel.Usuarios" Multiplicity="1" />
+    <End Role="Recetas" Type="PW3_TP_20161CModel.Recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Recetas">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservas_Recetas">
+    <End Role="Recetas" Type="PW3_TP_20161CModel.Recetas" Multiplicity="1" />
+    <End Role="Reservas" Type="PW3_TP_20161CModel.Reservas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recetas">
+        <PropertyRef Name="IdReceta" />
+      </Principal>
+      <Dependent Role="Reservas">
+        <PropertyRef Name="IdReceta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservas_Usuarios">
+    <End Role="Usuarios" Type="PW3_TP_20161CModel.Usuarios" Multiplicity="1" />
+    <End Role="Reservas" Type="PW3_TP_20161CModel.Reservas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Reservas">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EventosRecetas">
+    <End Role="Eventos" Type="PW3_TP_20161CModel.Eventos" Multiplicity="*" />
+    <End Role="Recetas" Type="PW3_TP_20161CModel.Recetas" Multiplicity="*" />
+  </Association>
+</Schema>

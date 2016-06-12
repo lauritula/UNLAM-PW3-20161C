@@ -9,18 +9,26 @@ namespace Repositorio
    
     public class CocineroRepositorio
     {
-        //////////EVENTOS
+        PW3_TP_20161CEntities Contexto;
         
-        //creacion de la lista de eventos
-        public static List<Evento> ListaEventos = new List<Evento>();
-
-        //método para añadir nuevo evento a la lista
-        public void CrearEvento(Evento nuevoEvento) 
+        public CocineroRepositorio()
         {
-            nuevoEvento.statusEvento = "Programado";
-            ListaEventos.Add(nuevoEvento);
+            Contexto = new PW3_TP_20161CEntities();
         }
 
+//////////EVENTOS
+        //creacion de la lista de eventos
+        public static List<Eventos> ListaEventos = new List<Eventos>();
+
+        //método para añadir nuevo evento a la lista
+        public void CrearEvento(Eventos nuevoEvento) 
+        {
+            nuevoEvento.Estado = 1; // estado 1 = Programado, 2 = en curso, 3 = finalizado
+  //          ListaEventos.Add(nuevoEvento);
+            Contexto.Eventos.Add(nuevoEvento);
+            Contexto.SaveChanges();
+        }
+/*
         //método para obtener un evento por su nombre
         public Evento ObtenerPorNombre(string nombreEvento)
         {
@@ -176,9 +184,9 @@ namespace Repositorio
             ListaEventos.Add(nuevoEvento2);
 
         }
+*/
 
-
-        //////////RECETAS
+//////////RECETAS
 
         //creacion de la lista de recetas
         public static List<Receta> ListaRecetas = new List<Receta>();

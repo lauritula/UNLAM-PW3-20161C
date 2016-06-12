@@ -2,12 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using Entidades;
 
 namespace Repositorio
 {
     public class ComensalRepositorio
     {
+        PW3_TP_20161CEntities Contexto;
+        
+        public ComensalRepositorio()
+        {
+            Contexto = new PW3_TP_20161CEntities();
+        }
+
+
         public static List<Reserva> ListaReserva = new List<Reserva>();
 
         public void CrearReserva(Reserva nuevaReserva)
@@ -46,12 +55,12 @@ namespace Repositorio
         }
 
 
-        public void cargaFicticiaReserva()
+        public void cargaFicticiaReserva( )
         {
-            Reserva nuevaReserva = new Reserva();
+            Reserva nuevaReserva = new Reserva();            
             nuevaReserva.idReserva = 1;
             nuevaReserva.usuarioReserva = "comensal@bodegon.com";
-            nuevaReserva.eventoReserva = "Italia Nuestra";
+            nuevaReserva.eventoReserva = "Italia Mia";
             nuevaReserva.recetaReserva = "Lassagna";
             nuevaReserva.comensalesReserva = 4;
             nuevaReserva.estadoReserva = "Finalizado";
@@ -60,11 +69,30 @@ namespace Repositorio
             Reserva nuevaReserva2 = new Reserva();
             nuevaReserva2.idReserva = 2;
             nuevaReserva2.usuarioReserva = "comensal@bodegon.com";
-            nuevaReserva2.eventoReserva = "Italia Nuestra";
-            nuevaReserva2.recetaReserva = "Lassagna";
+            nuevaReserva2.eventoReserva = "Gourmet";
+            nuevaReserva2.recetaReserva = "Tacos";
             nuevaReserva2.comensalesReserva = 4;
-            nuevaReserva2.estadoReserva = "En curso";
+            nuevaReserva2.estadoReserva = "Finalizado";
             ListaReserva.Add(nuevaReserva2);
+
+            Reserva nuevaReserva3 = new Reserva();
+            nuevaReserva3.idReserva = 3;
+            nuevaReserva3.usuarioReserva = "comensal@bodegon.com";
+            nuevaReserva3.eventoReserva = "China Meal";
+            nuevaReserva3.recetaReserva = "Wok de Pollo";
+            nuevaReserva3.comensalesReserva = 4;
+            nuevaReserva3.estadoReserva = "En curso";
+            ListaReserva.Add(nuevaReserva3);
+
+            Reserva nuevaReserva4 = new Reserva();
+            nuevaReserva4.idReserva = 4;
+            nuevaReserva4.usuarioReserva = "comensal@bodegon.com";
+            nuevaReserva4.eventoReserva = "Todo Postre";
+            nuevaReserva4.recetaReserva = "Ganage";
+            nuevaReserva4.comensalesReserva = 4;
+            nuevaReserva4.estadoReserva = "Finalizado";
+            ListaReserva.Add(nuevaReserva4);
+            
         }
 
     }

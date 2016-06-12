@@ -10,7 +10,7 @@ using Repositorio;
 namespace UNLAM_PW3_20161C.comensales
 {
     public partial class reservar : System.Web.UI.Page
-    {
+    {/*
         ComensalRepositorio ReserRepo = new ComensalRepositorio();
         CocineroRepositorio CocRepo = new CocineroRepositorio();
 
@@ -40,7 +40,7 @@ namespace UNLAM_PW3_20161C.comensales
      //       nuevaReserva.eventoReserva = gvEventosDisponibles.checkbox;
 
             ReserRepo.CrearReserva(nuevaReserva);
-        }
+        }*/
 
 
     }

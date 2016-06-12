@@ -9,7 +9,7 @@ using Repositorio;
 namespace UNLAM_PW3_20161C.cocineros
 {
     public partial class perfil : System.Web.UI.Page
-    {
+    {/*
         CocineroRepositorio CocRepo = new CocineroRepositorio();
         
         protected void Page_Load(object sender, EventArgs e)
@@ -35,6 +35,6 @@ namespace UNLAM_PW3_20161C.cocineros
             string usuario = HttpContext.Current.Session["usuario"].ToString();
             gvRecetasPerfil.DataSource = CocRepo.recetasPorUsuario(usuario);
             gvRecetasPerfil.DataBind();
-        }
+        }*/
     }
 }
