@@ -19,7 +19,7 @@ namespace UNLAM_PW3_20161C.cocineros
             sltDescripcion.textoLabel = "Descripcion: ";
             sltCantComensales.textoLabel = "Cantidad de Comensales: ";
             sltUbicacion.textoLabel = "Ubicacion del Evento: ";
-    //        txtFotoEvento.Text = fuFotoEvento.FileContent.ToString();
+            txtFotoEvento.Text = Convert.ToString(fuFotoEvento.FileName);
 
             if (IsPostBack)
             {
@@ -27,7 +27,7 @@ namespace UNLAM_PW3_20161C.cocineros
                 String path = Server.MapPath("~/img/eventos/");
                 if (fuFotoEvento.HasFile)
                 {
-                    txtFotoEvento.Text = fuFotoEvento.FileName;
+                    txtFotoEvento.Text = path + fuFotoEvento.FileName;
                     String fileExtension =
                         System.IO.Path.GetExtension(fuFotoEvento.FileName).ToLower();
                     String[] allowedExtensions = { ".gif", ".png", ".jpeg", ".jpg" };
@@ -45,8 +45,7 @@ namespace UNLAM_PW3_20161C.cocineros
                 {
                     try
                     {
-                        fuFotoEvento.PostedFile.SaveAs(path
-                            + fuFotoEvento.FileName);
+                        fuFotoEvento.PostedFile.SaveAs(path + fuFotoEvento.FileName);
                         lblFileOk.Text = "Subido con Exito.";
                     }
                     catch (Exception ex)
@@ -67,6 +66,7 @@ namespace UNLAM_PW3_20161C.cocineros
             string descripcion = sltDescripcion.textoTextbox;
             string cantComensales = sltCantComensales.textoTextbox;
             string ubicacion = sltUbicacion.textoTextbox;
+            string eventoFoto = txtFotoEvento.Text;
 
             Eventos nuevoEvento = new Eventos();
             nuevoEvento.Nombre = nombreEvento;
@@ -75,8 +75,11 @@ namespace UNLAM_PW3_20161C.cocineros
             nuevoEvento.Ubicacion = ubicacion;
             nuevoEvento.Fecha = Convert.ToDateTime(cFechaEvento);
             nuevoEvento.IdUsuario = Convert.ToInt32(HttpContext.Current.Session["usuario"]);
+            nuevoEvento.NombreFoto = eventoFoto;
    //         nuevoEvento.Recetas = cblRecetas;
             CocRepo.CrearEvento(nuevoEvento);
+
+            Response.Redirect("default.aspx");
 
         }
     }

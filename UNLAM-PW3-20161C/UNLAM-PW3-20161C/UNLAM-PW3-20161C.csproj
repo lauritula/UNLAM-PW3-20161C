@@ -89,7 +89,9 @@
     <Content Include="ucListado.ascx" />
     <Content Include="ucMenuAnonimo.ascx" />
     <Content Include="ucSimpleLabelText.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

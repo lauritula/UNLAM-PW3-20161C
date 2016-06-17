@@ -4,7 +4,7 @@
 
 <asp:Content ID="Content1" runat="server" contentplaceholderid="anonimoBody">
     <div id="eventosRecientes">
-        <uc2:ucEventoReciente runat="server" id="ucEventoReciente" />
+        <uc2:ucEventoReciente runat="server" id="ucEventoReciente0" />
         <uc2:ucEventoReciente runat="server" ID="ucEventoReciente1" />
         <uc2:ucEventoReciente runat="server" ID="ucEventoReciente2" />
         <uc2:ucEventoReciente runat="server" ID="ucEventoReciente3" />

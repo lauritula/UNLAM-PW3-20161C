@@ -5,23 +5,26 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Entidades;
+using Repositorio;
 
 namespace UNLAM_PW3_20161C.comensales
 {
     public partial class Comensal : System.Web.UI.MasterPage
     {
+        public UsuarioRepositorio userRepo = new UsuarioRepositorio();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Usuario objUsuario = (Usuario)Session["objUsuario"];
+            Usuarios objUsuario = (Usuarios)Session["objUsuario"];
             if (objUsuario == null)
             {
                 Response.Redirect("~/default.aspx");
             }
             else
             {
-                switch (objUsuario.TipoUsuario)
+                switch (objUsuario.IdTipoUsuario)
                 {
-                    case "cocinero":
+                    case 0:
                         Response.Redirect("~/cocineros/perfil.aspx");
                         break;
                     default:

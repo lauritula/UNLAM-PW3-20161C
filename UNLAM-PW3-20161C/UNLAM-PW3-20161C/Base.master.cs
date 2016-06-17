@@ -5,14 +5,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Entidades;
+using Repositorio;
 
 namespace UNLAM_PW3_20161C
 {
     public partial class Base : System.Web.UI.MasterPage
     {
+        public UsuarioRepositorio userRepo = new UsuarioRepositorio();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-                Usuario objUsuario = (Usuario)Session["objUsuario"];
+
+                Usuarios objUsuario = (Usuarios)Session["objUsuario"];
                 if (objUsuario == null)
                 {
                     ucMenuComensal.Visible = false;
@@ -20,13 +24,13 @@ namespace UNLAM_PW3_20161C
                 }
                 else
                 {
-                    switch (objUsuario.TipoUsuario)
+                    switch (objUsuario.IdTipoUsuario)
                     {
-                        case "cocinero":
+                        case 0:
                             ucMenuComensal.Visible = false;
                             ucMenuAnonimo.Visible = false;
                             break;
-                        case "comensal":
+                        case 1:
                             ucMenuCocinero.Visible = false;
                             ucMenuAnonimo.Visible = false;
                             break;

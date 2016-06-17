@@ -5,11 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Entidades;
+using Repositorio;
 
 namespace UNLAM_PW3_20161C
 {
     public partial class login : System.Web.UI.Page
     {
+        public UsuarioRepositorio userRepo = new UsuarioRepositorio();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             sltEmail.textoLabel = "Email: ";
@@ -23,29 +26,26 @@ namespace UNLAM_PW3_20161C
         {
             string email = sltEmail.textoTextbox;
             string password = sltPassword.textoTextbox;
-            string tipoUsuario = "anonimo";
+       //     string tipoUsuario = "anonimo";
+            var objUsuario = userRepo.ObtenerUsuario(email, password);
 
-            if (email == "cocinero@bodegon.com" && password == "cocinero")
+            
+
+            if (objUsuario.IdTipoUsuario == 0)
             {
-                tipoUsuario = "cocinero";
                 HttpContext.Current.Session["usuario"] = email;
-                var objUsuario = new Usuario();
-                objUsuario.User = email;
-                objUsuario.TipoUsuario = tipoUsuario;
+                HttpContext.Current.Session["userID"] = objUsuario.IdUsuario;
                 Session["objUsuario"] = objUsuario;
-                Session.Add( tipoUsuario, objUsuario);
+                Session.Add( Convert.ToString(objUsuario.IdTipoUsuario), objUsuario);
                 Response.Redirect("cocineros/perfil.aspx");
 
             }
-            else if (email == "comensal@bodegon.com" && password == "comensal")
+            else if (objUsuario.IdTipoUsuario == 1)
             {
-                tipoUsuario = "comensal";
-                Session["usuario"] = email;
-                var objUsuario = new Usuario();
-                objUsuario.User = email;
-                objUsuario.TipoUsuario = tipoUsuario;
+                HttpContext.Current.Session["usuario"] = email;
+                HttpContext.Current.Session["userID"] = objUsuario.IdUsuario;
                 Session["objUsuario"] = objUsuario;
-                Session.Add(tipoUsuario, objUsuario);
+                Session.Add( Convert.ToString(objUsuario.IdTipoUsuario), objUsuario);
                 Response.Redirect("comensales/reservas.aspx");
 
             }

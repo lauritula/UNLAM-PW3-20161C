@@ -10,7 +10,7 @@ namespace Repositorio
     {
         PW3_TP_20161CEntities Contexto; 
 
-        public static List<Usuarios> ListaEmpleados = new List<Usuarios>();
+    //    public static List<Usuarios> ListaEmpleados = new List<Usuarios>();
 
         public UsuarioRepositorio()
         {

@@ -5,25 +5,28 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Entidades;
+using Repositorio;
 
 namespace UNLAM_PW3_20161C
 {
     public partial class Anonimo : System.Web.UI.MasterPage
     {
+        public UsuarioRepositorio userRepo = new UsuarioRepositorio();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Usuario objUsuario = (Usuario)Session["objUsuario"];		             
+            Usuarios objUsuario = (Usuarios)Session["objUsuario"];		             
              if (objUsuario == null)		
              {		
              }		
              else		
              {		
-                 switch (objUsuario.TipoUsuario)		
+                 switch (objUsuario.IdTipoUsuario)		
                  {		
-                     case "comensal":
+                     case 1:
                          Response.Redirect("~/comensales/reservas.aspx");		
                          break;		
-                     case "cocinero":		
+                     case 0:		
                          Response.Redirect("~/cocineros/perfil.aspx");		
                          break;		
                      default:		
