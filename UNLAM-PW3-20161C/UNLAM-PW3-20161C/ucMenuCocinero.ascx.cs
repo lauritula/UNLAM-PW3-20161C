@@ -13,7 +13,7 @@ namespace UNLAM_PW3_20161C
         protected void Page_Load(object sender, EventArgs e)
         {
             lblUsuarioConectado.Text = (string)Session["Usuario"];
-            Usuario objUsuario = (Usuario)Session["objUsuario"]; 
+            Usuarios objUsuario = (Usuarios)Session["objUsuario"];
         }
 
         protected void lbLogOut_Click(object sender, EventArgs e)

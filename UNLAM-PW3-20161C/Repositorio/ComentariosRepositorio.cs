@@ -19,23 +19,19 @@ namespace Repositorio
 
         public void Crear(Comentarios com)
         {
-            ListaComentarios.Add(com);
+            Contexto.Comentarios.Add(com);
+            Contexto.SaveChanges();
         }
 
-        public void Limpiar(Comentarios com)
-        {
-            ListaComentarios.Clear();
-        }
 
-        public List<Comentarios> ObtenerPorEvento(int evento)
+        public IQueryable<Comentarios> ObtenerPorEvento(string nombreEvento)
         {
-            List<Comentarios> comentarioXEvento = new List<Comentarios>();
-            foreach (Comentarios co in ListaComentarios)
-            {
-                if (co.IdEvento == evento)
-                    comentarioXEvento.Add(co);
-            }
-            return comentarioXEvento;
+           var comentario = from c in Contexto.Comentarios
+                         join e in Contexto.Eventos
+                                on c.IdEvento equals e.IdEvento
+                         where e.Nombre == nombreEvento
+                         select c;
+            return comentario;
          }
 
 

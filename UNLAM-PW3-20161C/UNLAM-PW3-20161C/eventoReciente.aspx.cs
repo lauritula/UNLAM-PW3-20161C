@@ -11,6 +11,8 @@ namespace UNLAM_PW3_20161C
     public partial class eventoReciente : System.Web.UI.Page
     {
         ComentariosRepositorio ComentariosRepo = new ComentariosRepositorio();
+        CocineroRepositorio CocRepo = new CocineroRepositorio();
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,7 +23,6 @@ namespace UNLAM_PW3_20161C
 
             if (!IsPostBack)
             {
-                ComentariosRepo.cargaFicticiaComentario();
                 CargarGrillaComentarios();
             }
 
@@ -29,8 +30,8 @@ namespace UNLAM_PW3_20161C
 
         private void CargarGrillaComentarios()
         {
-
-            gvComentarios.DataSource = ComentariosRepo.ObtenerPorEvento(lblNombre.Text);
+            gvComentarios.DataSource = ComentariosRepo.ObtenerPorEvento(lblNombre.Text).ToArray();
+            gvComentarios.AutoGenerateColumns = false;
             gvComentarios.DataBind();
         }
     }

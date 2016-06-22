@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="PW3_TP_20161CModel.Comentarios" Width="1.5" PointX="3.375" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_TP_20161CModel.Eventos" Width="1.5" PointX="1" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_TP_20161CModel.Recetas" Width="1.5" PointX="5.5" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="PW3_TP_20161CModel.Reservas" Width="1.5" PointX="7.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PW3_TP_20161CModel.Reservas" Width="1.5" PointX="8.125" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_TP_20161CModel.Usuarios" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
         <AssociationConnector Association="PW3_TP_20161CModel.FK_Comentarios_Eventos" ManuallyRouted="false" />
         <AssociationConnector Association="PW3_TP_20161CModel.FK_Comentarios_Usuarios" ManuallyRouted="false" />

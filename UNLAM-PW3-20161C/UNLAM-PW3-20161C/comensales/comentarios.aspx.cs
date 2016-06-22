@@ -25,15 +25,14 @@ namespace UNLAM_PW3_20161C.comensales
             }
         }
 
-        
 
         protected void btnComentario_Click(object sender, EventArgs e)
         {
-            Comentario nuevoComentario = new Comentario();
-            nuevoComentario.comentarioDescripcion = sltComentario.textoTextbox;
-            nuevoComentario.comentarioID = nuevoComentario.comentarioID + 1;
-            nuevoComentario.comentarioEvento = Request.QueryString["evento"];
-            nuevoComentario.comentarioUsuario = HttpContext.Current.Session["usuario"].ToString();
+            Comentarios nuevoComentario = new Comentarios();
+            nuevoComentario.Comentarios1 = sltComentario.textoTextbox;
+            nuevoComentario.Puntuacion = Convert.ToByte(lbPuntacion.SelectedValue);
+            nuevoComentario.IdEvento = Convert.ToInt32(Request.QueryString["evento"]);
+            nuevoComentario.IdUsuario = Convert.ToInt32(HttpContext.Current.Session["userID"]);
 
             ComeRepo.Crear(nuevoComentario);
             Response.Redirect("reservas.aspx");

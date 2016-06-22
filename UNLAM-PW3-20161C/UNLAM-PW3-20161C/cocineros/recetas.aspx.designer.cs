@@ -40,6 +40,15 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.RangeValidator rvTiempoCoccion;
         
         /// <summary>
+        /// Control revTiempoCoc.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revTiempoCoc;
+        
+        /// <summary>
         /// Control sltRecetaDescripcion.
         /// </summary>
         /// <remarks>

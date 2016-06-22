@@ -10,14 +10,13 @@ using Entidades;
 namespace UNLAM_PW3_20161C.cocineros
 {
     public partial class cancelar : System.Web.UI.Page
-    {/*
+    {
         CocineroRepositorio CocRepo = new CocineroRepositorio();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                CocRepo.cargaFicticiaEventos2();
                 CargarGrillaEventos();
 
             }
@@ -26,16 +25,18 @@ namespace UNLAM_PW3_20161C.cocineros
 
         private void CargarGrillaEventos()
         {
-            string usuario = HttpContext.Current.Session["usuario"].ToString();
-            gvEventosCancelar.DataSource = CocRepo.eventoPorEstado("Finalizado", usuario);
+            int usuario = Convert.ToInt32(HttpContext.Current.Session["userID"]);
+            gvEventosCancelar.DataSource = CocRepo.eventoPorEstado(3, usuario).ToArray();
+            gvEventosCancelar.AutoGenerateColumns = false;
             gvEventosCancelar.DataBind();
-           
         }
 
-        protected void btnCancelarEvento_Click(object sender, EventArgs e)
+        protected void gvEventosCancelar_SelectedIndexChanged(object sender, EventArgs e)
         {
-         //   gvEventosCancelar.DataSource = CocRepo.cancelarEvento();
-
-        }*/
+            GridViewRow row = gvEventosCancelar.SelectedRow;
+            int IdEvento = Convert.ToInt32(row.Cells[0].Text);
+            CocRepo.cancelarEvento(IdEvento);
+            Response.Redirect("perfil.aspx");
+        }
     }
 }

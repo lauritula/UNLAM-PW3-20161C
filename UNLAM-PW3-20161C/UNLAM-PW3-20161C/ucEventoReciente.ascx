@@ -8,7 +8,7 @@
         <asp:Image ID="imgEvento" runat="server" CssClass="imgEvento" ImageUrl="img/eventos/x.jpg" />
         <div id="erPrecio">
             <asp:Label ID="lblSimbolo" runat="server" Text="$" CssClass="labelEventoReciente"></asp:Label>
-            <asp:Label ID="lblPrecio" runat="server" Text="precio" CssClass="labelEventoReciente"></asp:Label>
+            <asp:Label ID="lblPrecio" runat="server" Text="" CssClass="labelEventoReciente"></asp:Label>
         </div>
         <div id="erPuntuacion">
             <asp:Label ID="lblPuntuacion" runat="server" Text="puntuacion" CssClass="labelEventoReciente"></asp:Label>

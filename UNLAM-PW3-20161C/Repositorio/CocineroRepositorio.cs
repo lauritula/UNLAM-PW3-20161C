@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Entidades;
+using System.Data.Entity.Validation;
+
 
 namespace Repositorio
 {
@@ -27,26 +29,60 @@ namespace Repositorio
         public void CrearEvento(Eventos nuevoEvento) 
         {
             nuevoEvento.Estado = 1; // estado 1 = Programado, 2 = en curso, 3 = finalizado, 4 = Cancelado
-  //          ListaEventos.Add(nuevoEvento);
             Contexto.Eventos.Add(nuevoEvento);
-            Contexto.SaveChanges();
+            try
+            {
+                Contexto.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                
+                throw;
+            }
+            
+        }
+
+        public void EventoReceta(int idEve )
+        {
+            
         }
 
         //método para obtener un evento por su nombre
-        public Eventos ObtenerPorNombre(string nombreEvento)
+        public IQueryable<Eventos> ObtenerPorNombre(string nombreEvento)
         {
-                var ev = (from e in Contexto.Eventos
-                                where e.Nombre == nombreEvento
-                                select e).FirstOrDefault();
-                return ev;
+                var evento = from c in Contexto.Comentarios
+                             join e in Contexto.Eventos
+                                    on c.IdEvento equals e.IdEvento
+                             where e.Nombre == nombreEvento
+                             select e;
+                return evento;
         }
-        
+
+        public Eventos ObtenerPorId(int id)
+        {
+            var evento = (from e in Contexto.Eventos
+                          where e.IdEvento == id
+                          select e).FirstOrDefault();
+
+            return evento;
+        }
+
+        public IQueryable<Eventos> ObtenerEventoId(int id)
+        {
+            var evento = from e in Contexto.Eventos
+                         where e.IdEvento == id
+                         select e;
+
+            return evento;
+        }
+
         //método para cancelar un evento
-        public void cancelarEvento(string nombreEventoACancelar)
+        public void cancelarEvento(int id)
         {
             Eventos eventoACancelar = new Eventos();
-            eventoACancelar = ObtenerPorNombre(nombreEventoACancelar);
+            eventoACancelar = ObtenerPorId(id);
             eventoACancelar.Estado = 4;
+            Contexto.SaveChanges();
         }
 
         //método para finalizar un evento
@@ -54,95 +90,165 @@ namespace Repositorio
         {
             foreach (Eventos ev in Contexto.Eventos)
             {
-                if (ev.Fecha == DateTime.Now)
+                if (ev.Fecha <= DateTime.Now)
                     ev.Estado = 3 ;
-            }            
+            }
+            Contexto.SaveChanges();
         }
 
 
         //metodo de retorno de eventos por usuario
-        public List<Eventos> eventoPorUsuario(int autor)
+        public IQueryable<Eventos> eventoPorUsuario(int autor)
         {
-            List<Eventos> eventoPorUser = new List<Eventos>();
-                    var evento = (from e in Contexto.Eventos
+                    var evento = from e in Contexto.Eventos
                                       where e.IdUsuario == autor
-                                      select e).FirstOrDefault();
-                    eventoPorUser.Add(evento);
-
-            return eventoPorUser;
+                                      select e;
+            return evento;
         }
 
         //metodo de retorno de eventos por estado
-        public List<Eventos> eventoPorEstado(int estado, int autor)
+        public IQueryable<Eventos> eventoPorEstado(int estado, int autor)
         {
-            List<Eventos> eventoPorStatus = new List<Eventos>();
-/*            foreach (Eventos ev in ListaEventos)
+/*             List<Eventos> eventoPorStatus = new List<Eventos>();
+           foreach (Eventos ev in ListaEventos)
             {
                 if (ev.Estado != estado & ev.IdUsuario == autor)
                     eventoPorStatus.Add(ev);
             }
 */
-            var evento = (from e in Contexto.Eventos
-                          where e.IdUsuario == autor 
-                          && e.Estado != estado
-                          select e).FirstOrDefault();
-            eventoPorStatus.Add(evento);
-            return eventoPorStatus;
+            var evento = from e in Contexto.Eventos
+                         where e.IdUsuario == autor
+                         && e.Estado == 1
+                         select e;
+            return evento;
+        }
+
+        public int eventoPorEstadoI(int estado, int autor)
+        {
+            int cantidad = 0;
+
+            foreach (var item in Contexto.Eventos)
+            {
+                var evento = (from e in Contexto.Eventos
+                              where e.IdUsuario == autor
+                              && e.Estado == 1
+                              || e.Estado == 2
+                              select e).FirstOrDefault();
+                cantidad = cantidad + 1;
+            }
+            return cantidad;
         }
 
         //Eventos disponibles para reservar
-        public List<Eventos> eventoDisponibles(int estado)
+        public IQueryable<Eventos> eventoDisponibles()
         {
-            List<Eventos> eventoAReservar = new List<Eventos>();
-            foreach (Eventos ev in ListaEventos )
-            {
-                if (ev.Estado != estado & ev.CantidadComensales > ev.)
-                    eventoAReservar.Add(ev);
-                
-            }
-            return eventoAReservar;
+            var evento = from e in Contexto.Eventos
+                         where e.Estado == 1
+                         select e;
+            return evento;
         }
 
-        /*
+
         public Eventos ObtenerRecientes(int id)
-        {
-
+        {  
+                        var evento = (from e in Contexto.Eventos
+                                      where e.Fecha < DateTime.Today
+                                      && e.IdEvento == id
+                                          //            && e.Fecha > DateTime.Today
+                                      && e.Estado == 3
+                                      select e).FirstOrDefault();
+                        return evento;
         }
 
-        public Eventos ObtenerPuntuacion(int id)
+        public decimal ObtenerPuntuacion(int id)
         {
-                decimal puntuacionTotal;
+            decimal puntuacionEvento = 0;
+            byte i = 0;
 
-                decimal puntuacionevento = ;
+            foreach (var item in Contexto.Comentarios)
+            {
+                byte puntua = (from e in Contexto.Comentarios
+                              where e.IdEvento == id
+                              select e.Puntuacion).FirstOrDefault();
+                puntuacionEvento = puntuacionEvento + puntua;
+                i++;
+            }
 
-            return;
+            puntuacionEvento = puntuacionEvento / i;
+
+            return puntuacionEvento;
         }
-        */
+
 
 
 //////////RECETAS
 
         //creacion de la lista de recetas
-        public static List<Recetas> ListaRecetas = new List<Recetas>();
+  //      public static List<Recetas> ListaRecetas = new List<Recetas>();
 
         //método para añadir nueva receta a la lista
         public void CrearReceta(Recetas nuevaReceta)
         {
-            ListaRecetas.Add(nuevaReceta);
+            Contexto.Recetas.Add(nuevaReceta);
+            Contexto.SaveChanges();
         }
 
         //metodo de retorno de recetas por usuario
-        public List<Recetas> recetasPorUsuario(int autor) 
+        public IQueryable<Recetas> recetasPorUsuario(int autor) 
         { 
-            List<Recetas> recetasPorUser = new List<Recetas>();
-            foreach (Recetas re in ListaRecetas)
-            {
-                if (re.IdUsuario == autor)
-                    recetasPorUser.Add(re);
-            }
-            return recetasPorUser; 
+            var receta = from e in Contexto.Recetas
+                              where e.IdUsuario == autor
+                              select e;
+            
+            return receta; 
         }
 
+        public Recetas recetasPorId(int id)
+        {
+                var receta = (from e in Contexto.Recetas
+                         where e.IdReceta == id
+                         select e).FirstOrDefault();
+                return receta;
+       }
+
+        public int cantRecetas(int id)
+        {
+            int cantidad = 0;
+
+            foreach (var item in Contexto.Recetas)
+            {
+               var receta = (from e in Contexto.Recetas
+                          where e.IdReceta == id
+                          select e).FirstOrDefault();
+                cantidad = cantidad + 1;
+            }
+            return cantidad;
+        }
+
+        public IEnumerable<Recetas> recetasPorEvento(int id)
+        {
+         
+            var receta = from r in Contexto.Recetas
+                   /*      join e in Contexto.Eventos
+                                on r.Eventos equals e.Recetas*/ 
+                         where !Contexto.Eventos.Select( e => e.IdEvento).Contains(r.IdReceta)
+                         select r;
+            return receta;
+        }
+
+        public List<Recetas> obtenerRecetas()
+        {
+            List<Recetas> nueva = new List<Recetas>();
+            foreach (Recetas item in Contexto.Recetas)
+            {
+                var receta = (from e in Contexto.Recetas
+                             where e.IdReceta == item.IdReceta
+                            select e).FirstOrDefault();
+                nueva.Add(receta);
+            }
+
+            return nueva;
+        }
 
     }
 }

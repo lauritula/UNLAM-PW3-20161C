@@ -29,9 +29,9 @@ namespace UNLAM_PW3_20161C
        //     string tipoUsuario = "anonimo";
             var objUsuario = userRepo.ObtenerUsuario(email, password);
 
-            
-
-            if (objUsuario.IdTipoUsuario == 0)
+            try
+            {
+                if (objUsuario.IdTipoUsuario == 0)
             {
                 HttpContext.Current.Session["usuario"] = email;
                 HttpContext.Current.Session["userID"] = objUsuario.IdUsuario;
@@ -53,6 +53,15 @@ namespace UNLAM_PW3_20161C
             {
                 lblErrorLogin.Visible = true;
             }
+
+            }
+            catch (Exception)
+            {
+                lblErrorLogin.Visible = true;
+
+            }
+
+            
 
             
 

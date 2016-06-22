@@ -31,5 +31,13 @@ namespace Repositorio
                             select u).FirstOrDefault();
             return user;
         }
+
+        public Usuarios ObtenerUsuarioId(int id)
+        {
+            var user = (from u in Contexto.Usuarios
+                        where u.IdUsuario == id
+                        select u).FirstOrDefault();
+            return user;
+        }
     }
 }

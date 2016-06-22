@@ -17,6 +17,12 @@
     <asp:Label ID="Comentarios" runat="server" Text="Comentarios:" CssClass="labelEventoReciente"></asp:Label>
 
     <asp:GridView ID="gvComentarios" runat="server" CssClass="table table-striped table-hover">
+<Columns>
+    <asp:BoundField DataField="IdComentario" Visible="false"   HeaderText="Id de Comentario"/>
+    <asp:BoundField DataField="IdUsuario" Visible="false"   HeaderText="Id de Usuario" />  
+    <asp:BoundField DataField="Puntuacion" HeaderText="Puntuacion" /> 
+    <asp:BoundField DataField="Comentarios1" HeaderText="Precio" /> 
+    </Columns>
     </asp:GridView>
 
 </asp:Content>

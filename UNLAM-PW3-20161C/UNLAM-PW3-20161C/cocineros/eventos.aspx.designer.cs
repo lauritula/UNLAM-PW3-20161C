@@ -31,13 +31,13 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::System.Web.UI.WebControls.Label lblFechaEvento;
         
         /// <summary>
-        /// Control cFechaEvento.
+        /// Control txtFechaEvento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar cFechaEvento;
+        protected global::System.Web.UI.WebControls.TextBox txtFechaEvento;
         
         /// <summary>
         /// Control sltDescripcion.
@@ -49,6 +49,15 @@ namespace UNLAM_PW3_20161C.cocineros {
         protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltDescripcion;
         
         /// <summary>
+        /// Control sltPrecio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltPrecio;
+        
+        /// <summary>
         /// Control sltCantComensales.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace UNLAM_PW3_20161C.cocineros {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::UNLAM_PW3_20161C.ucSimpleLabelText sltCantComensales;
+        
+        /// <summary>
+        /// Control revCantidadComensales.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCantidadComensales;
         
         /// <summary>
         /// Control sltUbicacion.
@@ -83,6 +101,15 @@ namespace UNLAM_PW3_20161C.cocineros {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList cblRecetas;
+        
+        /// <summary>
+        /// Control rfvCblRecetas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCblRecetas;
         
         /// <summary>
         /// Control lblFotoEvento.

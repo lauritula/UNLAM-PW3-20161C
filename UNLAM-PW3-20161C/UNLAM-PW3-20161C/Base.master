@@ -9,9 +9,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="style/bootstrap.css" rel="stylesheet" type="text/css" />
-<link href="style/calendar.css" rel="stylesheet" type="text/css"/>
-<link href="style/style1.css" rel="stylesheet" type="text/css"/>
+    <link href="style/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="style/style1.css" rel="stylesheet" type="text/css"/>
+    <link href="style/jquery-ui.theme.css" rel="stylesheet" />
+    <link href="style/jquery-ui.css" rel="stylesheet" />
+    <link href="style/jquery-ui.structure.css" rel="stylesheet" />
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/calendar.js"></script>
 
 <title>B.ON!</title>
     <asp:ContentPlaceHolder ID="baseHead" runat="server">

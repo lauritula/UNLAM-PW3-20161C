@@ -26,15 +26,17 @@ namespace UNLAM_PW3_20161C.cocineros
 
         protected void btnCargarReceta_Click(object sender, EventArgs e)
         {
-            Receta nuevaReceta = new Receta();
-            nuevaReceta.nombreReceta = sltRecetaNombre.textoTextbox;
-            nuevaReceta.tiempoReceta = Convert.ToInt16(sltTiempoCoccion.textoTextbox);
-            nuevaReceta.tipoReceta = ingredientes.SelectedValue;
-            nuevaReceta.ingredientesReceta = sltIngredientes.textoTextbox;
-            nuevaReceta.descripcionPasosReceta = sltRecetaDescripcion.textoTextbox;
-            nuevaReceta.autorReceta = HttpContext.Current.Session["usuario"].ToString();
+            Recetas nuevaReceta = new Recetas();
+            nuevaReceta.Nombre = sltRecetaNombre.textoTextbox;
+            nuevaReceta.TiempoCoccion = Convert.ToInt32(sltTiempoCoccion.textoTextbox);
+            nuevaReceta.Tipo = Convert.ToByte(ingredientes.SelectedValue);
+            nuevaReceta.Ingredientes = sltIngredientes.textoTextbox;
+            nuevaReceta.Descripcion = sltRecetaDescripcion.textoTextbox;
+            nuevaReceta.IdUsuario = Convert.ToInt32(HttpContext.Current.Session["userID"]);
             CocRepo.CrearReceta(nuevaReceta);
+            Response.Redirect("perfil.aspx");
 
         }
+
     }
 }

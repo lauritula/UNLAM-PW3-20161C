@@ -4,11 +4,16 @@
 
 <asp:Content ID="Content1" runat="server" contentplaceholderid="anonimoBody">
     <div id="eventosRecientes">
-        <uc2:ucEventoReciente runat="server" id="ucEventoReciente0" />
+        <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+
+        </asp:PlaceHolder>
+
+
+<%--        <uc2:ucEventoReciente runat="server" id="ucEventoReciente0" />
         <uc2:ucEventoReciente runat="server" ID="ucEventoReciente1" />
         <uc2:ucEventoReciente runat="server" ID="ucEventoReciente2" />
         <uc2:ucEventoReciente runat="server" ID="ucEventoReciente3" />
         <uc2:ucEventoReciente runat="server" ID="ucEventoReciente4" />
-        <uc2:ucEventoReciente runat="server" ID="ucEventoReciente5" />
+        <uc2:ucEventoReciente runat="server" ID="ucEventoReciente5" />--%>
     </div>
 </asp:Content>
